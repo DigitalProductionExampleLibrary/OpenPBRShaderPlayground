@@ -1,0 +1,29 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    endTimeCode = 100
+    metersPerUnit = 0.01
+    startTimeCode = 0
+    subLayers = [
+        @./cameras/renderCams.usd@,
+        @./materials/material_assignment.usd@,
+        @./materials/materials_openPBR.usd@,
+        @./assets/ShdrPlygrnd_Geo.usd@
+    ]
+    timeCodesPerSecond = 30
+    upAxis = "Y"
+)
+
+def Xform "World"
+{
+    def "lightRig" (
+        prepend payload = @./lights/lightRig.usd@
+    )
+    {
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+}
+
