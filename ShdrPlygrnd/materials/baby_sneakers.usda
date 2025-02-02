@@ -1,0 +1,27 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "baby_sneakers" (
+            prepend inherits = </__class_mtl__/baby_sneakers>
+            prepend references = @./baby_sneakers.mtlx@</MaterialX/Materials/baby_sneakers>
+        )
+        {
+        }
+    }
+
+    over "sneakers_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/baby_sneakers>
+    }
+}
+
