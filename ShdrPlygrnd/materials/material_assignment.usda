@@ -1,0 +1,3426 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    endTimeCode = 100
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 60
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "tape_grp"
+    {
+        over "roll_geo5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (107.97997, 49.492973, 173.4171)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (37.01888047926791, -18.7553480137207, 44.78771325163172)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "roll_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "roll_geo4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (107.85763, 51.37585, 173.59407)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (35.62030545812188, -18.391616324217978, 41.93855054292065)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "roll_geo7" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "roll_geo6" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "roll_geo3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "roll_geo2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tape> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "support_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "paper_grp"
+    {
+        over "paperWallsB_geo3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperWallsA_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperWallsB_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pPlane11"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pPlane12"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperChair"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0)
+            float3 xformOp:translate:pivot = (-20.584309, -7, -6.06903)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "paperWallsA_geo1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperWallsA_geo2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperWallsB_geo1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paperWallsB_geo2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "tube_grp"
+    {
+        over "group1tube48_n3d2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tube> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "group1tube49_n3d2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tube> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "paintSpill_geo"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (176.47893, 81.526, -178.93127)
+            float3 xformOp:scale = (100, 100, 100)
+            double3 xformOp:translate = (-52.36212974925343, -6.504284461925943, 4.705820449882493)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+
+        over "group1Merged_tube48_n3d2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "tube_mug_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/tube> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+
+        over "group1tube49_n3d2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tube> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "group1tube48_n3d2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/tube> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "group1Merged_tube48_n3d3"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "Looks"
+    {
+        over "masonJarGlass" (
+            customData = {
+                dictionary position = {
+                    double2 mtlx = (28.348539352416992, -67.00548553466797)
+                }
+            }
+        )
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:base_weight = 1
+                color3f inputs:geometry_opacity
+                bool inputs:geometry_thin_walled = 1
+                float inputs:specular_ior = 1.52
+                float inputs:specular_weight = 1
+                color3f inputs:subsurface_color = (0.50808495, 0.83160293, 0.9740634)
+                float inputs:subsurface_radius = 0.001
+                color3f inputs:transmission_color = (0.9723214, 1, 0.95)
+                float inputs:transmission_depth = 1
+                float inputs:transmission_dispersion_scale = 0
+                color3f inputs:transmission_scatter = (1, 0.99999, 0.99999)
+                float inputs:transmission_weight = 0.98
+                float inputs:transmission_weight.connect = </World/Looks/masonJarGlass/ND_separate3_color3.outputs:outr>
+            }
+
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Opacity" (
+                prepend apiSchemas = ["NodeGraphNodeAPI"]
+            )
+            {
+                asset inputs:file = @../textures/masonJar_MAT_TransMask.1002.tif@ (
+                    colorSpace = "sRGB"
+                )
+                uniform float2 ui:nodegraph:node:pos = (-1320.6182, -595.76624)
+            }
+
+            over "Roughness" (
+                prepend apiSchemas = ["NodeGraphNodeAPI"]
+            )
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxcolorcorrect2" (
+                prepend apiSchemas = ["NodeGraphNodeAPI"]
+            )
+            {
+                float inputs:contrast = 2 (
+                    customData = {
+                        dictionary omni = {
+                            dictionary kit = {
+                                dictionary property = {
+                                    dictionary usd = {
+                                        float2 soft_range_ui = (0, 2)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                )
+                float inputs:contrastpivot = 0.8
+                float inputs:gain = 0.95
+                float inputs:gamma = 1
+                float inputs:lift = 0.1
+                uniform float2 ui:nodegraph:node:pos = (-116.26871, 369.67865)
+            }
+        }
+
+        over "chairA"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "baby_sneakers"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "books"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "bottle"
+        {
+            token outputs:mdl:displacement
+            token outputs:mdl:surface
+            token outputs:mdl:volume
+            token outputs:mtlx:displacement
+            token outputs:mtlx:volume
+
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Bump"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Opacity"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Clear_Coat_Weight"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                color3f inputs:coat_color = (0.86624205, 1, 0.86624205)
+                float inputs:coat_ior = 1
+                float inputs:coat_roughness = 0.33
+                float inputs:coat_weight = 0
+                color3f inputs:geometry_opacity = (0.62536025, 0.6181515, 0.6181515)
+                bool inputs:geometry_thin_walled = 1
+                float inputs:specular_anisotropy = 0.5
+                float inputs:specular_ior = 1.1
+                float inputs:specular_weight = 1
+                float inputs:thin_film_ior = 1.1
+                float inputs:thin_film_thickness = 0.0001
+                color3f inputs:transmission_color = (0.49777055, 1, 0.050000012)
+                float inputs:transmission_depth = 0.001
+                float inputs:transmission_dispersion_abbe_number = 0
+                float inputs:transmission_scatter_anisotropy = 0
+                float inputs:transmission_weight = 1
+            }
+
+            over "mtlxcolorcorrect1"
+            {
+                float inputs:contrast = 1
+                float inputs:gain = 1
+                float inputs:gamma = 1
+                float inputs:hue = -35.600002
+                float inputs:lift = 7.4
+                float inputs:saturation = -25.1
+            }
+        }
+
+        over "ceramicMug"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "crumpledPaper"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "drapedFabric"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "dresser"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "eraser"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "floor"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "lamp"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "lampShade"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:transmission_weight = 0
+            }
+        }
+
+        over "OJ"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:specular_ior = 1.3
+                float inputs:subsurface_anisotropy = 0
+                color3f inputs:subsurface_color = (0.98407644, 0.78126436, 0.18804006)
+                float inputs:subsurface_radius = 0.004
+                color3f inputs:subsurface_radius_scale = (1, 0.97642875, 0.47133756)
+                float inputs:subsurface_weight = 1
+                color3f inputs:transmission_color = (1, 0.74164, 0.26433122)
+                float inputs:transmission_depth = 0.1
+                float inputs:transmission_dispersion_scale = 0
+                color3f inputs:transmission_scatter = (1, 0.9974441, 0.9426752)
+                float inputs:transmission_weight = 0.85
+            }
+        }
+
+        over "OJfoam"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Bump"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:subsurface_radius = 0.001
+                color3f inputs:subsurface_radius_scale = (1, 0.9999971, 0.99999)
+                float inputs:subsurface_weight = 0.1
+                float inputs:transmission_weight = 0
+            }
+        }
+
+        over "OJglass"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:base_weight = 0.7
+                float inputs:coat_ior = 1
+                bool inputs:geometry_thin_walled = 1
+                float inputs:specular_ior = 1.3000001
+            }
+        }
+
+        over "pacifier"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "pacifierRubber"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:subsurface_radius = 10
+                float inputs:thin_film_thickness = 0.001
+                float inputs:transmission_weight = 0.5
+            }
+        }
+
+        over "paintBrushes"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "paintBrushesSML"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "paintSpill"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:subsurface_radius = 0.1
+                float inputs:subsurface_weight = 0.2
+            }
+        }
+
+        over "paper"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:thin_film_thickness = 0.001
+            }
+        }
+
+        over "paperPlans"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:thin_film_ior = 1
+                float inputs:thin_film_thickness = 0.001
+            }
+        }
+
+        over "pencil"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "planePlastic"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "planePlasticLidWheels"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "shadow"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+        }
+
+        over "toolsMetal"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "toolsPlastic"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "towels"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "tube"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 0
+            }
+        }
+
+        over "walls"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file = @../textures/wall_Normal_G.tif@ (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxplace2d1"
+            {
+                float2 inputs:scale = (0.33, 0.33)
+            }
+        }
+
+        over "wings"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Metalness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Opacity"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "wood_chair_seat_mesh"
+        {
+            over "BaseColor"
+            {
+                asset inputs:file (
+                    colorSpace = "sRGB"
+                )
+            }
+
+            over "Normal"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "iceCube"
+        {
+            over "Bump"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "Roughness"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:transmission_weight = 1
+            }
+        }
+
+        over "iceCubesInner"
+        {
+            over "Opacity"
+            {
+                asset inputs:file (
+                    colorSpace = "raw"
+                )
+            }
+        }
+
+        over "lampBulb"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:emission_luminance = 10
+                bool inputs:geometry_thin_walled = 1
+            }
+        }
+
+        over "jellyToyEyes"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:transmission_weight = 0.1
+            }
+        }
+
+        over "stars"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:emission_luminance = 0.5
+            }
+        }
+
+        over "masonJarWater"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:specular_ior = 1.2
+                float inputs:subsurface_radius = 0.0001
+                float inputs:subsurface_weight = 1
+                float inputs:transmission_depth = 1
+                float inputs:transmission_weight = 0.999
+            }
+        }
+
+        over "meetMAT"
+        {
+            over "mtlxremap1"
+            {
+                color3f inputs:inhigh = (1, 1, 1)
+                color3f inputs:inlow = (0.3, 0.3, 0.3)
+                color3f inputs:outhigh = (3, 3, 3)
+                color3f inputs:outlow = (0, 0, 0)
+                color3f outputs:out = (1, 1, 1)
+            }
+
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:base_weight = 1
+                float inputs:coat_anisotropy = 1
+                float inputs:coat_roughness = 0.1
+                float inputs:coat_weight = 1
+                bool inputs:geometry_thin_walled = 1
+                float inputs:specular_rotation = 0
+                color3f inputs:subsurface_color = (1, 0.9220251, 0.54140127)
+                float inputs:subsurface_radius = 0.001
+                float inputs:subsurface_weight = 0.1
+                color3f inputs:transmission_color = (1, 0.51442754, 0.11783439)
+                float inputs:transmission_depth = 0.06
+                float inputs:transmission_dispersion_scale = 0
+                color3f inputs:transmission_scatter = (2.7776002e-7, 0, 0.000001)
+                float inputs:transmission_weight = 0.05
+            }
+        }
+
+        over "jellyToy"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                color3f inputs:subsurface_color = (0.37971714, 0.2839162, 0.69108284)
+                float inputs:subsurface_radius = 0.2
+                float inputs:transmission_weight = 0.3
+            }
+        }
+
+        over "bubbles"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                color3f inputs:specular_color = (0.9522293, 0.9514312, 0.92190355)
+                float inputs:specular_ior = 1
+                float inputs:specular_roughness = 0
+                float inputs:subsurface_weight = 0
+                float inputs:thin_film_thickness
+                float inputs:transmission_depth = 1
+                float inputs:transmission_weight = 1
+            }
+        }
+
+        over "yellowPaint"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:subsurface_radius = 0.001
+                float inputs:subsurface_weight = 0.4
+            }
+        }
+
+        over "tape"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+                float inputs:thin_film_ior = 1.2
+                float inputs:thin_film_thickness = 0.0001
+                float inputs:transmission_weight = 0.9
+            }
+        }
+
+        over "bubblesMasonJar"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                float inputs:transmission_weight = 1
+            }
+        }
+
+        over "straw"
+        {
+            over "mtlxopen_pbr_surface"
+            {
+                bool inputs:geometry_thin_walled = 1
+            }
+        }
+    }
+
+    over "masonJar_grp"
+    {
+        over "jar_geo_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            token interpolateBoundary = "edgeAndCorner"
+            rel material:binding = </World/Looks/masonJarGlass> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool primvars:disableAutoLod = 1
+            bool primvars:doNotCastShadows = 0
+            bool primvars:enableFastRefractionShadow = 0
+            bool refinementEnableOverride = 1
+            int refinementLevel = 0
+            uniform token subdivisionScheme = "catmullClark"
+            token triangleSubdivisionRule = "catmullClark"
+            token visibility = "inherited"
+        }
+
+        over "water_geo_n3d"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 0
+            uniform token subdivisionScheme = "catmullClark"
+            token visibility = "inherited"
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            float3 xformOp:scale = (0.98, 0.98, 0.98)
+            double3 xformOp:translate = (1.2079226507921703e-13, 0.036555668594855595, -1.2079226507921703e-13)
+            float3 xformOp:translate:pivot = (-58.532436, -1.4, -19.15438)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "zbrushBoolBubbles_geo1_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            token visibility = "inherited"
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            float3 xformOp:scale = (0.95, 0.98, 0.95)
+            double3 xformOp:translate = (-7.105427357601002e-15, -0.16574209059705947, -0.08402627818594155)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "zbrushBoolBubbles_geo2_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            float3 xformOp:scale = (0.98, 0.98, 0.98)
+            double3 xformOp:translate = (-7.105427357601002e-15, -0.1577315354871116, -0.037773126538574786)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "zbrushBoolBubbles_geo3_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:rotateXYZ = (0, 0, 0)
+            float3 xformOp:scale = (0.98, 0.98, 0.98)
+            double3 xformOp:translate = (0, -0.18201395159161837, -0.026914344167060733)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:translate:pivot", "xformOp:rotateXYZ", "xformOp:scale", "!invert!xformOp:translate:pivot"]
+        }
+
+        over "brushB_geo_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "bubbles1_geo2_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "bubbles1_geo1_n3d"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "wallsFloor_grp"
+    {
+        over "wallRGT"
+        {
+            over "pPlane3"
+            {
+                token interpolateBoundary = "edgeAndCorner"
+                bool refinementEnableOverride = 0
+                uniform token subdivisionScheme = "catmullClark"
+                token triangleSubdivisionRule = "catmullClark"
+            }
+
+            over "group42"
+            {
+                over "pCube12"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube19"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube18"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube17"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube16"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube14"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube27"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pCube15"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "window_scrnRT"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "floor_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "left_wall_orig"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wallBK_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pPlane13"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wallLft"
+        {
+            over "group30"
+            {
+                over "group41"
+                {
+                    over "pCube12"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube19"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube18"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube17"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube16"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube14"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube27"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+
+                    over "pCube15"
+                    {
+                        uniform token subdivisionScheme = "catmullClark"
+                    }
+                }
+            }
+
+            over "pPlane3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "window"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "floorBoards_grp"
+        {
+            over "pPlane5"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pPlane4"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pPlane14"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "chairA_grp"
+    {
+        over "wood_chair_seat_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wood_chair_back_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wood_chair_leg_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "chairB_grp"
+    {
+        over "wood_chair_back_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wood_chair_seat_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wood_chair_leg_mesh"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "dresser_grp"
+    {
+        over "dresserFrame_geo"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "dresserDrawers_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "plane_grp"
+    {
+        over "mainBody_grp"
+        {
+            over "bottle_grp"
+            {
+                over "bottle_geo"
+                {
+                    bool refinementEnableOverride = 0
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "cap_geo"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "baby_pacifier_grp"
+            {
+                over "baby_pacifier_main_body_geo"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "baby_pacifier_rubber_geo"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+
+        over "pencils_grp"
+        {
+            over "eraser_front_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_bckRgt_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh10"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_backLft_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_frntOutterLft_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh6"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_frntMidLft_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh6"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_frntBtmLft_grp"
+            {
+                over "eraser_holder_001_mesh9"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_frontMidRgt_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh7"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_frntOutterRght_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh8"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_seat_grp"
+            {
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_holder_001_mesh6"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pencil_sharpened_1_grp1"
+            {
+                over "eraser_holder_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "eraser_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "base_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+
+        over "cardboard_grp"
+        {
+            over "pCube28"
+            {
+                bool refinementEnableOverride = 1
+                int refinementLevel = 1
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "wingLft_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "wingRgt_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "wingBack_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pCube7"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "cardboardSeat_grp"
+            {
+                over "cardboardSeat1_geo"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "cardboardSeat3_geo"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+
+        over "lids_grp"
+        {
+            over "plastic_lid_003_mesh1"
+            {
+                bool refinementEnableOverride = 1
+                int refinementLevel = 1
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "plastic_lid_003_mesh2"
+            {
+                bool refinementEnableOverride = 1
+                int refinementLevel = 1
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "tape_grp"
+        {
+            over "tapeRgt_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "tapeLft_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "plasticCaps_grp"
+        {
+            over "capLft_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "capRgt_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "cap_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "capLft1_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "capRgt1_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "capRgt2_geo"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "hotglue_grp"
+        {
+            over "hotGlue_geom"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "hotGlue_geom1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "hotGlue_geom2"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "hotGlueTopWing_geom"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "hotGlueTopWing_geom1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "hotGlueTopWing_geom2"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "geom1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "geom2"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "geom"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "mug_grp"
+    {
+        over "cermaicCup_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pliers_grp"
+        {
+            over "pliers_001_grp"
+            {
+                over "handle_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pliers_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pliers_002_grp"
+            {
+                over "handle_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "pliers_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+
+        over "scissors_grp"
+        {
+            over "blade_001_grp"
+            {
+                over "arm_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "blade_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "blade_002_grp"
+            {
+                over "screw_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "screw_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "arm_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "blade_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+    }
+
+    over "meetMAT_grp"
+    {
+        over "Mesh_01_Head_n3d2"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "Mesh_02_Body_n3d2"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "Mesh_03_Base_n3d2"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "crmpledPaper_grp"
+    {
+        token visibility = "invisible"
+
+        over "crumpledPaperA_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "crumpledPaperA_geo1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "orangeJuice_grp"
+    {
+        token visibility = "inherited"
+
+        over "bubble2_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            token visibility = "inherited"
+            float3 xformOp:scale = (0.96, 0.96, 0.96)
+        }
+
+        over "juice_geo_smoothed"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:scale = (0.97, 0.97, 0.97)
+        }
+
+        over "bubbles1_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            token visibility = "inherited"
+            float3 xformOp:scale = (0.94, 0.96, 0.94)
+        }
+
+        over "foamMesh_ORIG"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:scale = (0.98, 0.98, 0.98)
+        }
+
+        over "foamMesh_smoothed"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+            float3 xformOp:scale = (0.98, 2, 0.98)
+        }
+
+        over "glass_geo_smoothed"
+        {
+            bool primvars:disableAutoLod = 1
+            bool primvars:disableRtSssTransmission = 1
+            bool primvars:doNotCastShadows = 0
+            bool primvars:enableFastRefractionShadow = 0
+            bool primvars:enableShadowTerminatorFix = 1
+            bool refinementEnableOverride = 1
+            int refinementLevel = 0
+            uniform token subdivisionScheme = "catmullClark"
+            token visibility = "inherited"
+        }
+
+        over "iceCube"
+        {
+            over "solidShatter1"
+            {
+                over "shard1"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard2"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard3"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard4"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard6"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard7"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard8"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard9"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard10"
+                {
+                    bool refinementEnableOverride = 1
+                    int refinementLevel = 1
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "bubbles"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pSphere3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "shard5"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "glass_geo_ORIG"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "straw_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "juice_geo_ORIG"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "iceCube2"
+        {
+            over "bubbles"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "solidShatter1"
+            {
+                over "shard1"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard2"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard3"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard4"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard6"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard7"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard8"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard9"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard10"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pSphere3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "shard5"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "iceCube1"
+        {
+            over "bubbles"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "solidShatter1"
+            {
+                over "shard1"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard2"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard3"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard4"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard6"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard7"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard8"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard9"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "shard10"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+
+            over "pSphere3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "shard5"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "paintSpill_grp"
+    {
+        double3 xformOp:translate = (-36.02248782624915, -8.3, 0.5509552123613731)
+
+        over "polySurface4"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+            double3 xformOp:translate = (0.5812785676059025, -0.1, -0.040567160792602974)
+        }
+
+        over "polySurface5"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface7"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface8"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface9"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface10"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface11"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface6"
+        {
+            float3 xformOp:rotateXYZ = (10.786283, -0.41932642, 4.126193)
+            float3 xformOp:scale = (1.6669816, 1.9401441, 1.6669816)
+            double3 xformOp:translate = (0.7676332292739918, 0.3278323917259902, -0.9977221042709079)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+        }
+    }
+
+    over "brushA_geo"
+    {
+        bool refinementEnableOverride = 0
+        int refinementLevel = 1
+        uniform token subdivisionScheme = "catmullClark"
+    }
+
+    over "towel_grp"
+    {
+        over "towel_rolled_001_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_thrown_002_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_rolled_001_mesh1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_rolled_001_mesh2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_004_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_006_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_005_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_003_mesh1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_002_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_001_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "towel_002_mesh1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "outlet_grp"
+    {
+        over "base_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "screw_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "powerPlug_grp"
+    {
+        over "cap_007_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wire_005_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "cap_008_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "wire_006_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "cap_009_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "plug_005_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "cable_003_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "plug_006_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "octopus_grp"
+    {
+        over "octoBody_geo"
+        {
+            bool refinementEnableOverride = 0
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "octoEyeRT_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "octoEyeLT_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "lamp_grp"
+    {
+        over "office_lamp_03_stand_007_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stand_001_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stand_002_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stand_003_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stand_004_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stud_001_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_stud_002_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_base_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "office_lamp_03_arm_top_grp"
+        {
+            over "office_lamp_03_stand_005_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "office_lamp_03_stud_003_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "office_lamp_03_stud_004_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group17"
+            {
+                over "office_lamp_03_shade_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "office_lamp_03_hinge_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "office_lamp_03_bulb_001_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "office_lamp_03_stand_006_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+
+                over "office_lamp_03_bulb_002_mesh"
+                {
+                    uniform token subdivisionScheme = "catmullClark"
+                }
+            }
+        }
+    }
+
+    over "paintBrushes_grp"
+    {
+        over "group26"
+        {
+            over "paint_brush_rootFBXASC032group15FBXASC032bolt_003_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "paint_brush_rootFBXASC032group15FBXASC032bolt_002_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "paint_brush_rootFBXASC032group15FBXASC032ferrule_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "handle_meshFBXASC032paint_brush_rootFBXASC032group15"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "paint_brush_rootFBXASC032group15FBXASC032bolt_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "paint_brush_rootFBXASC032group15FBXASC032bristles_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "paint_brush_rootFBXASC032group15FBXASC032bolt_004_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group27"
+        {
+            over "group15FBXASC032paint_brush_root1FBXASC032bolt_002_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032paint_brush_root1FBXASC032bristles_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032paint_brush_root1FBXASC032bolt_003_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032handle_meshFBXASC032paint_brush_root1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032paint_brush_root1FBXASC032ferrule_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032paint_brush_root1FBXASC032bolt_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "group15FBXASC032paint_brush_root1FBXASC032bolt_004_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "pin_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pin1_geo"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "sneakers_grp"
+    {
+        over "babySneakers_lft_grp"
+        {
+            over "baby_sneakers_001_lace_eyelets_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_ankle_strap_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_lace_panels_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_main_body_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_heelguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_sole_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_soleguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_toeguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_tongue_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_lace_fastener_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_laces_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "babySneakers_rgt_grp"
+        {
+            over "baby_sneakers_001_lace_eyelets_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_ankle_strap_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_lace_panels_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_main_body_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_heelguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_sole_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_soleguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_toeguard_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_tongue_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_lace_fastener_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "baby_sneakers_001_laces_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "books_grp"
+    {
+        over "book_006_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "book_009_mesh"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "group24"
+        {
+            over "book_009_mesh4"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "book_009_mesh3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "book_009_mesh2"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "book_009_mesh1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "stars_grp"
+    {
+        over "groupNumber_2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_3"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_4"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_5"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_6"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_7"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_26"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_27"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_28"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_29"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_30"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_31"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_32"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "groupNumber_33"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "paintSpill_scrnRT_grp"
+    {
+        over "polySurface4"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface5"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface6"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface7"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface8"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface9"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface10"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "polySurface11"
+        {
+            bool refinementEnableOverride = 1
+            int refinementLevel = 1
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    over "coloredPencils_grp"
+    {
+        over "group48"
+        {
+            over "pencil_frntMidLft_grp3FBXASC032eraser_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "eraser_holder_001_mesh6FBXASC032pencil_frntMidLft_grp3"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp3FBXASC032base_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group49"
+        {
+            over "pencil_frntMidLft_grp2FBXASC032base_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp2FBXASC032eraser_holder_001_mesh6"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "eraser_001_meshFBXASC032pencil_frntMidLft_grp2"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group50"
+        {
+            over "pencil_frntMidLft_grp4FBXASC032base_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "eraser_holder_001_mesh6FBXASC032pencil_frntMidLft_grp4"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp4FBXASC032eraser_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group51"
+        {
+            over "pencil_frntMidLft_grp1FBXASC032eraser_holder_001_mesh6"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp1FBXASC032base_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "eraser_001_meshFBXASC032pencil_frntMidLft_grp1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group52"
+        {
+            over "eraser_holder_001_mesh6FBXASC032pencil_frntMidLft_grp5"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp5FBXASC032base_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "pencil_frntMidLft_grp5FBXASC032eraser_001_mesh"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+    }
+
+    over "stringLights_grp"
+    {
+        over "group38"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group37"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group36"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group35"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group34"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "pCylinder1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "group33"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group43"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group44"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group45"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "group46"
+        {
+            over "miniBulb1"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+
+            over "miniBulb"
+            {
+                uniform token subdivisionScheme = "catmullClark"
+            }
+        }
+
+        over "pin1_geo2"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pin1_geo3"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pin1_geo1"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+
+        over "pin1_geo4"
+        {
+            uniform token subdivisionScheme = "catmullClark"
+        }
+    }
+
+    def Mesh "Plane"
+    {
+        float3[] extent = [(-50, 0, -50), (50, 0, 50)]
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 2, 3, 1]
+        normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(-50, 0, -50), (50, 0, -50), (-50, 0, 50), (50, 0, 50)]
+        bool primvars:isMatteObject = 1
+        texCoord2f[] primvars:st = [(0, 1), (0, 0), (1, 0), (1, 1)] (
+            interpolation = "faceVarying"
+        )
+        uniform token subdivisionScheme = "none"
+        double3 xformOp:rotateXYZ = (0, 0, 0)
+        double3 xformOp:scale = (0.38024763901154707, 1, 0.09983180800122628)
+        double3 xformOp:translate = (-17.71505490898048, -17.805882749028605, -34.327329934093854)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+}
+
