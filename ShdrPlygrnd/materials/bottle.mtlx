@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="BaseColor" type="color3">
+      <input name="file" type="filename" colorspace="srgb_tx" value="textures/bottle_MAT_BaseColor.<UDIM>.png" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+  <image name="Roughness" type="color3">
+      <input name="file" type="filename" colorspace="Raw" value="textures/bottle_MAT_Roughness.<UDIM>.png" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+  <image name="Normal" type="vector3">
+      <input name="file" type="filename" colorspace="Raw" value="textures/bottle_MAT_Normal.<UDIM>.png" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <colorcorrect name="mtlxcolorcorrect2" type="color3">
+      <input name="in" type="color3" nodename="BaseColor" />
+      <input name="gamma" type="float" value="1.5" />
+  </colorcorrect>
+  <extract name="to_float1" type="float">
+      <input name="in" type="color3" nodename="Roughness" />
+  </extract>
+  <colorcorrect name="ND_colorcorrect_color3" type="color3">
+      <input name="in" type="color3" nodename="Roughness" />
+      <input name="contrast" type="float" value="1" />
+      <input name="gamma" type="float" value="0.7" />
+  </colorcorrect>
+  <extract name="to_float1_01" type="float">
+      <input name="in" type="color3" nodename="ND_colorcorrect_color3" />
+  </extract>
+
+  <extract name="red" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="0" />
+  </extract>
+  <extract name="green" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="1" />
+  </extract>
+  <extract name="blue" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="2" />
+  </extract>
+  <invert name="mtlxinvert1" type="float">
+      <input name="in" type="float" nodename="green" />
+  </invert>
+  <combine3 name="mtlxcombine3" type="vector3">
+      <input name="in1" type="float" nodename="red" />
+      <input name="in2" type="float" nodename="mtlxinvert1" />
+      <input name="in3" type="float" nodename="blue" />
+  </combine3>
+  <normalmap name="mtlxnormalmap1" type="vector3">
+      <input name="in" type="vector3" nodename="mtlxcombine3" />
+  </normalmap>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" nodename="mtlxcolorcorrect2" />
+
+    <input name="specular_weight" type="float" value="0.5" />
+    <input name="specular_ior" type="float" value="1.1" />
+    <input name="specular_color" type="color3" value="0.521, 0.521, 0.521" />
+    <input name="specular_roughness" type="float" nodename="to_float1" />
+
+    <input name="coat_ior" type="float" value="1.7" />
+    <input name="coat_color" type="color3" value="0.46778, 1.00002, 0.46778" />
+    <input name="coat_roughness_anisotropy" type="float" value="1" />
+    <!-- FIXME: No available on OpenPBR v1.1 -->
+    <!-- <input name="coat_rotation" type="float" value="1" /> -->
+
+    <input name="fuzz_weight" type="float" nodename="to_float1_01" />
+    <input name="fuzz_color" type="color3" value="0.45, 0.45, 0.45" />
+    <input name="fuzz_roughness" type="float" value="0.8" />
+
+    <input name="transmission_weight" type="float" value="1" />
+    <input name="transmission_depth" type="float" value="0.25" />
+    <input name="transmission_scatter_anisotropy" type="float" value="1" />
+
+    <input name="geometry_normal" type="vector3" nodename="mtlxnormalmap1" />
+    <input name="specular_roughness" type="float" nodename="to_float1" />
+  </open_pbr_surface>
+
+  <surfacematerial name="bottle" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
