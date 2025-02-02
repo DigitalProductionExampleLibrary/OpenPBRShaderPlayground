@@ -9,7 +9,8 @@
     upAxis = "Y"
     subLayers = [
         @./baby_sneakers.usda@,
-        @./books.usda@
+        @./books.usda@,
+        @./bottle.usda@
     ]
 )
 
@@ -17,209 +18,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "bottle" (
-            prepend inherits = </__class_mtl__/bottle>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/bottle/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 1)
-                color3f inputs:base_color.connect = </World/Looks/bottle/mtlxcolorcorrect2.outputs:out>
-                float inputs:coat_anisotropy = 1
-                color3f inputs:coat_color = (0.46778, 1.00002, 0.46778)
-                float inputs:coat_ior = 1.7
-                float inputs:coat_rotation = 1
-                color3f inputs:fuzz_color = (0.45, 0.45, 0.45)
-                float inputs:fuzz_roughness = 0.8
-                float inputs:fuzz_weight.connect = </World/Looks/bottle/to_float1_01.outputs:out>
-                vector3f inputs:geometry_normal.connect = </World/Looks/bottle/mtlxnormalmap1.outputs:out>
-                color3f inputs:geometry_opacity
-                color3f inputs:specular_color = (0.521, 0.521, 0.521)
-                float inputs:specular_ior = 1.1
-                float inputs:specular_roughness.connect = </World/Looks/bottle/to_float1.outputs:out>
-                float inputs:specular_weight = 0.5
-                float inputs:transmission_depth = 0.25
-                float inputs:transmission_dispersion_abbe_number (
-                    customData = {
-                        dictionary omni = {
-                            dictionary kit = {
-                                dictionary property = {
-                                    dictionary usd = {
-                                        float2 soft_range_ui = (0, 91)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                )
-                float inputs:transmission_scatter_anisotropy = 1
-                float inputs:transmission_weight = 1
-                token outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-514.44763, 0)
-            }
-
-            def Shader "mtlxcolorcorrect2" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_colorcorrect_color3"
-                float inputs:gamma = 1.5
-                color3f inputs:in.connect = </World/Looks/bottle/BaseColor.outputs:out>
-                color3f outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-1154.8643, 378.53226)
-            }
-
-            def Shader "BaseColor" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/bottle_MAT_BaseColor.<UDIM>.png@ (
-                    colorSpace = "srgb_tx"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/bottle/st.outputs:out>
-                color3f outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-1510.0577, 353.90097)
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-
-            def Shader "to_float1" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/bottle/Roughness.outputs:out>
-                float outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-937.1159, 40.15337)
-            }
-
-            def Shader "Roughness" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/bottle_MAT_Roughness.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/bottle/st.outputs:out>
-                color3f outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-1510.6735, 51.12126)
-            }
-
-            def Shader "mtlxnormalmap1"
-            {
-                uniform token info:id = "ND_normalmap"
-                vector3f inputs:in.connect = </World/Looks/bottle/mtlxcombine3.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxcombine3"
-            {
-                uniform token info:id = "ND_combine3_vector3"
-                float inputs:in1.connect = </World/Looks/bottle/red.outputs:out>
-                float inputs:in2.connect = </World/Looks/bottle/mtlxinvert1.outputs:out>
-                float inputs:in3.connect = </World/Looks/bottle/blue.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "red"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/bottle/Normal.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Normal"
-            {
-                uniform token info:id = "ND_image_vector3"
-                asset inputs:file = @textures/bottle_MAT_Normal.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/bottle/st.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxinvert1"
-            {
-                uniform token info:id = "ND_invert_float"
-                float inputs:in.connect = </World/Looks/bottle/green.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "green"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/bottle/Normal.outputs:out>
-                int inputs:index = 1
-                float outputs:out
-            }
-
-            def Shader "blue"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/bottle/Normal.outputs:out>
-                int inputs:index = 2
-                float outputs:out
-            }
-
-            def Shader "ND_colorcorrect_color3" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_colorcorrect_color3"
-                float inputs:contrast = 1 (
-                    customData = {
-                        dictionary omni = {
-                            dictionary kit = {
-                                dictionary property = {
-                                    dictionary usd = {
-                                        float2 soft_range_ui = (0, 2)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                )
-                float inputs:gamma = 0.7 (
-                    customData = {
-                        dictionary omni = {
-                            dictionary kit = {
-                                dictionary property = {
-                                    dictionary usd = {
-                                        float2 soft_range_ui = (0, 25)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                )
-                color3f inputs:in.connect = </World/Looks/bottle/Roughness.outputs:out>
-                color3f outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-1223.8243, 95.29542)
-            }
-
-            def Shader "to_float1_01" (
-                prepend apiSchemas = ["NodeGraphNodeAPI"]
-            )
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/bottle/ND_colorcorrect_color3.outputs:out>
-                float outputs:out
-                uniform float2 ui:nodegraph:node:pos = (-933.19006, 197.71768)
-            }
-        }
-
         def Material "bubbles" (
             prepend inherits = </__class_mtl__/bubbles>
         )
@@ -4282,12 +4080,8 @@ over "World"
     {
         over "mainBody_grp"
         {
-            over "bottle_grp" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
+            over "bottle_grp"
             {
-                rel material:binding = </World/Looks/bottle>
-
                 over "cap_geo" (
                     prepend apiSchemas = ["MaterialBindingAPI"]
                 )
