@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="BaseColor" type="color3">
+      <input name="file" type="filename" colorspace="srgb_tx" value="textures/dresser_MAT_BaseColor.<UDIM>.tif" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+  <image name="Metalness" type="float">
+      <input name="file" type="filename" colorspace="Raw" value="textures/dresser_MAT_Metalness.<UDIM>.tif" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+  <image name="Roughness" type="float">
+      <input name="file" type="filename" colorspace="Raw" value="textures/dresser_MAT_Roughness.<UDIM>.tif" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+  <image name="Normal" type="vector3">
+      <input name="file" type="filename" colorspace="Raw" value="textures/dresser_MAT_Normal.<UDIM>.tif" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <extract name="red" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="0" />
+  </extract>
+  <extract name="green" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="1" />
+  </extract>
+  <extract name="blue" type="float">
+      <input name="in" type="vector3" nodename="Normal" />
+      <input name="index" type="integer" value="2" />
+  </extract>
+  <invert name="mtlxinvert1" type="float">
+      <input name="in" type="float" nodename="green" />
+  </invert>
+  <combine3 name="mtlxcombine3" type="vector3">
+      <input name="in1" type="float" nodename="red" />
+      <input name="in2" type="float" nodename="mtlxinvert1" />
+      <input name="in3" type="float" nodename="blue" />
+  </combine3>
+  <normalmap name="mtlxnormalmap1" type="vector3">
+      <input name="in" type="vector3" nodename="mtlxcombine3" />
+  </normalmap>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" nodename="BaseColor" />
+    <input name="base_metalness" type="float" nodename="Metalness" />
+    <input name="specular_roughness" type="float" nodename="Roughness" />
+    <input name="geometry_normal" type="vector3" nodename="mtlxnormalmap1" />
+  </open_pbr_surface>
+
+  <surfacematerial name="dresser" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
