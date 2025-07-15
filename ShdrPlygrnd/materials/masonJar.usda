@@ -1,0 +1,84 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "masonJarGlass" (
+            prepend inherits = </__class_mtl__/masonJarGlass>
+            prepend references = @./masonJarGlass.mtlx@</MaterialX/Materials/masonJarGlass>
+        )
+        {
+        }
+        
+        def Material "masonJarWater" (
+            prepend inherits = </__class_mtl__/masonJarWater>
+            prepend references = @./masonJarWater.mtlx@</MaterialX/Materials/masonJarWater>
+        )
+        {
+        }
+        
+        def Material "bubblesMasonJar" (
+            prepend inherits = </__class_mtl__/bubblesMasonJar>
+            prepend references = @./bubblesMasonJar.mtlx@</MaterialX/Materials/bubblesMasonJar>
+        )
+        {
+        }
+    }
+
+    over "masonJar_grp"
+    {
+        over "bubbles1_geo1_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubblesMasonJar>
+        }
+
+        over "bubbles1_geo2_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubblesMasonJar>
+        }
+
+        over "zbrushBoolBubbles_geo1_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubblesMasonJar>
+        }
+
+        over "zbrushBoolBubbles_geo2_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubblesMasonJar>
+        }
+
+        over "zbrushBoolBubbles_geo3_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubblesMasonJar>
+        }
+
+        over "jar_geo_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/masonJarGlass>
+        }
+
+        over "water_geo_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/masonJarWater>
+        }
+    }
+}
+
