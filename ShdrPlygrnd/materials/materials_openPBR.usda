@@ -22,7 +22,8 @@
         @./floor.usda@,
         @./floorFrames.usda@,
         @./hotglue.usda@,
-        @./iceCube.usda@
+        @./iceCube.usda@,
+        @./jellyToy.usda@
     ]
 )
 
@@ -30,39 +31,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "jellyToy" (
-            prepend inherits = </__class_mtl__/jellyToy>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/jellyToy/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 1)
-                float inputs:specular_roughness = 0.4
-                color3f inputs:subsurface_color = (0.12339, 0.03428, 0.413)
-                float inputs:subsurface_weight = 1
-                token outputs:out
-            }
-        }
-
-        def Material "jellyToyEyes" (
-            prepend inherits = </__class_mtl__/jellyToyEyes>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/jellyToyEyes/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0, 0, 0)
-                float inputs:specular_roughness = 0.2
-                color3f inputs:subsurface_color = (0.12339, 0.03428, 0.413)
-                token outputs:out
-            }
-        }
-
         def Material "lamp" (
             prepend inherits = </__class_mtl__/lamp>
         )
@@ -3575,30 +3543,6 @@ over "World"
         )
         {
             rel material:binding = </World/Looks/walls>
-        }
-    }
-
-    over "octopus_grp"
-    {
-        over "octoBody_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/jellyToy>
-        }
-
-        over "octoEyeLT_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/jellyToyEyes>
-        }
-
-        over "octoEyeRT_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/jellyToyEyes>
         }
     }
 

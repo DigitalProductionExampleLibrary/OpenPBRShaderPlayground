@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" value="1, 1, 1" />
+    <input name="specular_roughness" type="float" value="0.2" />
+    <input name="subsurface_weight" type="float" value="1" />
+    <input name="subsurface_color" type="color3" value="0.12339, 0.03428, 0.413" />
+  </open_pbr_surface>
+
+  <surfacematerial name="jellyToy" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
