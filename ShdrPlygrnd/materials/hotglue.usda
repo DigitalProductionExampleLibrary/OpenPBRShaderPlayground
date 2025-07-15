@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "hotglue" (
+            prepend inherits = </__class_mtl__/hotglue>
+            prepend references = @./hotglue.mtlx@</MaterialX/Materials/hotglue>
+        )
+        {
+        }
+    }
+
+    over "plane_grp"
+    {
+        over "hotglue_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/hotglue>
+        }
+    }
+}
+
