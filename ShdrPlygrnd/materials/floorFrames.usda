@@ -1,0 +1,18 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "floorFrames" (
+            prepend inherits = </__class_mtl__/floorFrames>
+            prepend references = @./floorFrames.mtlx@</MaterialX/Materials/floorFrames>
+        )
+        {
+        }
+    }
+}
+
