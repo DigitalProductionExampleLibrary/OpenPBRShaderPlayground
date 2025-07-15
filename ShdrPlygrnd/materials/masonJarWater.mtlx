@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="ScatterColor" type="color3">
+      <input name="file" type="filename" colorspace="Raw" value="textures/masonJarLiquid_transScatterColorPurple.jpg" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <!-- FIXME: Coat is not enabled by default -->
+    <input name="coat_ior" type="float" value="1" />
+    <input name="coat_roughness" type="float" value="0.1" />
+    <input name="specular_weight" type="float" value="0.5" />
+    <input name="specular_ior" type="float" value="1.52" />
+    <input name="specular_roughness" type="float" value="0.1" />
+    <input name="specular_roughness_anisotropy" type="float" value="0.5" />
+    <input name="subsurface_color" type="color3" nodename="ScatterColor" />
+    <input name="subsurface_radius" type="value" value="5" />
+    <input name="subsurface_radius_scale" type="color3" value="0.045, 0.02021, 0.02366" />
+    <input name="transmission_weight" type="float" value="0.17308" />
+    <input name="transmission_depth" type="float" value="2" />
+  </open_pbr_surface>
+
+  <surfacematerial name="masonJarWater" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
