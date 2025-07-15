@@ -11,7 +11,8 @@
         @./baby_sneakers.usda@,
         @./books.usda@,
         @./bottle.usda@,
-        @./bubbles.usda@
+        @./bubbles.usda@,
+        @./bubblesMasonJar.usda@
     ]
 )
 
@@ -19,46 +20,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "bubblesMasonJar" (
-            prepend inherits = </__class_mtl__/bubblesMasonJar>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/bubblesMasonJar/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0, 0.35256, 0.15633)
-                float inputs:coat_ior = 1.34376
-                float inputs:coat_weight = 1
-                float inputs:fuzz_roughness = 0.1859
-                float inputs:specular_anisotropy = 0.5
-                float inputs:specular_roughness = 0.15
-                float inputs:thin_film_ior = 1.4
-                color3f inputs:transmission_color.connect = </World/Looks/bubblesMasonJar/ScatterColor.outputs:out>
-                float inputs:transmission_depth = 0.1
-                color3f inputs:transmission_scatter.connect = </World/Looks/bubblesMasonJar/ScatterColor.outputs:out>
-                token outputs:out
-            }
-
-            def Shader "ScatterColor"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/masonJarLiquid_transScatterColor.jpg@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/bubblesMasonJar/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-        }
-
         def Material "ceramicMug" (
             prepend inherits = </__class_mtl__/ceramicMug>
         )
@@ -4311,41 +4272,6 @@ over "World"
 
     over "masonJar_grp"
     {
-        over "bubbles1_geo1_n3d" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubblesMasonJar>
-        }
-
-        over "bubbles1_geo2_n3d" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubblesMasonJar>
-        }
-
-        over "zbrushBoolBubbles_geo1_n3d" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubblesMasonJar>
-        }
-
-        over "zbrushBoolBubbles_geo2_n3d" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubblesMasonJar>
-        }
-
-        over "zbrushBoolBubbles_geo3_n3d" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubblesMasonJar>
-        }
-
         over "jar_geo_n3d" (
             prepend apiSchemas = ["MaterialBindingAPI"]
         )
