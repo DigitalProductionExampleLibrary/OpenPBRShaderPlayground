@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "floor" (
+            prepend inherits = </__class_mtl__/floor>
+            prepend references = @./floor.mtlx@</MaterialX/Materials/floor>
+        )
+        {
+        }
+    }
+
+    over "wallsFloor_grp"
+    {
+        over "floor_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/floor>
+        }
+    }
+}
+
