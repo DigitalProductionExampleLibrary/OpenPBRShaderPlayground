@@ -1,0 +1,25 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "eraser" (
+            prepend inherits = </__class_mtl__/eraser>
+            prepend references = @./eraser.mtlx@</MaterialX/Materials/eraser>
+        )
+        {
+        }
+    }
+
+    over "coloredPencils_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/eraser>
+    }
+}
+

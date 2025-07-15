@@ -6,8 +6,8 @@
     startTimeCode = 0
     subLayers = [
         @./cameras/renderCams.usd@,
-        @./materials/material_assignment.usd@,
-        @./materials/materials_openPBR.usd@,
+        @./materials/material_assignment.usda@,
+        @./materials/materials_openPBR.usda@,
         @./assets/ShdrPlygrnd_Geo.usd@
     ]
     timeCodesPerSecond = 30
