@@ -1,0 +1,37 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "bubbles" (
+            prepend inherits = </__class_mtl__/bubbles>
+            prepend references = @./bubbles.mtlx@</MaterialX/Materials/bubbles>
+        )
+        {
+        }
+    }
+
+    over "orangeJuice_grp"
+    {
+        over "bubble2_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubbles>
+        }
+
+        over "bubbles1_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/bubbles>
+        }
+    }
+}
+

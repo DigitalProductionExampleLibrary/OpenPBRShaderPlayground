@@ -10,7 +10,8 @@
     subLayers = [
         @./baby_sneakers.usda@,
         @./books.usda@,
-        @./bottle.usda@
+        @./bottle.usda@,
+        @./bubbles.usda@
     ]
 )
 
@@ -18,32 +19,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "bubbles" (
-            prepend inherits = </__class_mtl__/bubbles>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/bubbles/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 1)
-                float inputs:coat_ior = 1.34375
-                float inputs:coat_weight = 1
-                float inputs:fuzz_roughness = 0.28205
-                float inputs:fuzz_weight = 0.5
-                float inputs:specular_anisotropy = 0.5
-                float inputs:specular_ior = 1.2
-                float inputs:specular_roughness = 0.5
-                float inputs:subsurface_weight = 1
-                float inputs:thin_film_ior = 1.4
-                float inputs:thin_film_thickness = 2000
-                float inputs:transmission_depth = 0.3
-                float inputs:transmission_weight = 0.8141
-                token outputs:out
-            }
-        }
-
         def Material "bubblesMasonJar" (
             prepend inherits = </__class_mtl__/bubblesMasonJar>
         )
@@ -4191,20 +4166,6 @@ over "World"
 
     over "orangeJuice_grp"
     {
-        over "bubble2_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubbles>
-        }
-
-        over "bubbles1_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/bubbles>
-        }
-
         over "iceCube"
         {
             over "bubbles" (
