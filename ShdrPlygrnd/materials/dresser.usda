@@ -1,0 +1,41 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "dresser" (
+            prepend inherits = </__class_mtl__/dresser>
+            prepend references = @./dresser.mtlx@</MaterialX/Materials/dresser>
+        )
+        {
+        }
+    }
+
+    over "dresser_grp"
+    {
+        over "dresserDrawers_geo"
+        {
+            over "dresser_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/dresser>
+            }
+        }
+
+        over "dresserFrame_geo"
+        {
+            over "dresser_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/dresser>
+            }
+        }
+    }
+}
+
