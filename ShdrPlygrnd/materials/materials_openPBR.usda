@@ -20,7 +20,8 @@
         @./dresser.usda@,
         @./eraser.usda@,
         @./floor.usda@,
-        @./floorFrames.usda@
+        @./floorFrames.usda@,
+        @./hotglue.usda@
     ]
 )
 
@@ -28,22 +29,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "hotglue" (
-            prepend inherits = </__class_mtl__/hotglue>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/hotglue/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                float inputs:specular_roughness = 0.2
-                color3f inputs:subsurface_color = (1, 0.79489, 0.29906)
-                float inputs:subsurface_weight = 1
-                token outputs:out
-            }
-        }
-
         def Material "iceCube" (
             prepend inherits = </__class_mtl__/iceCube>
         )
@@ -3191,13 +3176,6 @@ over "World"
                     rel material:binding = </World/Looks/pacifierRubber>
                 }
             }
-        }
-
-        over "hotglue_grp" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/hotglue>
         }
 
         over "pencils_grp" (
