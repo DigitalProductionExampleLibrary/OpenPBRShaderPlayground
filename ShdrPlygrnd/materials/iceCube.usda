@@ -1,0 +1,131 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "iceCube" (
+            prepend inherits = </__class_mtl__/iceCube>
+            prepend references = @./iceCube.mtlx@</MaterialX/Materials/iceCube>
+        )
+        {
+        }
+
+        def Material "iceCubesInner" (
+            prepend inherits = </__class_mtl__/iceCubesInner>
+            prepend references = @./iceCubesInner.mtlx@</MaterialX/Materials/iceCubesInner>
+        )
+        {
+        }
+    }
+
+    over "orangeJuice_grp"
+    {
+        over "iceCube"
+        {
+            over "bubbles" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "shard5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "solidShatter1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+            
+            over "pSphere3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCubesInner>
+            }
+        }
+
+        over "iceCube1"
+        {
+            over "bubbles" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "shard5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "solidShatter1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+            
+            over "pSphere3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCubesInner>
+            }
+        }
+
+        over "iceCube2"
+        {
+            over "bubbles" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "shard5" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+
+            over "solidShatter1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCube>
+            }
+            
+            over "pSphere3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/iceCubesInner>
+            }
+        }
+    }
+
+    over "wallsFloor_grp"
+    {
+        over "floorBoards_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/iceCube>
+        }
+    }
+}
+

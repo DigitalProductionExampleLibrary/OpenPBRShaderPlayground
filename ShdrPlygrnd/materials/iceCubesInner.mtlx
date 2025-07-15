@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="Opacity" type="float">
+      <input name="file" type="filename" colorspace="Raw" value="textures/iceCube_grunge1.tif" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="specular_roughness" type="float" value="1" />
+    <input name="transmission_weight" type="float" value="0.15094" />
+    <input name="geometry_opacity" type="float" nodename="Opacity" />
+  </open_pbr_surface>
+
+  <surfacematerial name="iceCubesInner" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
