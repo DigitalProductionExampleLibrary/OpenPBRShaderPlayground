@@ -19,7 +19,8 @@
         @./drapedFabric.usda@,
         @./dresser.usda@,
         @./eraser.usda@,
-        @./floor.usda@
+        @./floor.usda@,
+        @./floorFrames.usda@
     ]
 )
 
@@ -27,22 +28,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "floorFrames" (
-            prepend inherits = </__class_mtl__/floorFrames>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/floorFrames/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 1)
-                float inputs:fuzz_roughness = 0.3
-                float inputs:specular_roughness = 0.2
-                token outputs:out
-            }
-        }
-
         def Material "hotglue" (
             prepend inherits = </__class_mtl__/hotglue>
         )
