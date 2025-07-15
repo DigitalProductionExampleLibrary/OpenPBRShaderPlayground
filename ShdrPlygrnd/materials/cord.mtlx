@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <!-- FIXME: Coat is not enabled by default -->
+    <input name="coat_roughness" type="float" value="0.1" />
+    <input name="base_color" type="color3" value="0.62931, 0.62931, 0.62931" />
+    <input name="specular_roughness" type="float" value="0.1" />
+  </open_pbr_surface>
+
+  <surfacematerial name="cord" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>

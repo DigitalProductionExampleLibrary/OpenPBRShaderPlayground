@@ -13,7 +13,8 @@
         @./bottle.usda@,
         @./bubbles.usda@,
         @./ceramicMug.usda@,
-        @./chairA.usda@
+        @./chairA.usda@,
+        @./cord.usda@
     ]
 )
 
@@ -21,22 +22,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "cord" (
-            prepend inherits = </__class_mtl__/cord>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/cord/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0.62931, 0.62931, 0.62931)
-                float inputs:coat_roughness = 0.1
-                float inputs:specular_roughness = 0.1
-                token outputs:out
-            }
-        }
-
         def Material "crumpledPaper" (
             prepend inherits = </__class_mtl__/crumpledPaper>
         )
@@ -4166,13 +4151,6 @@ over "World"
 
     over "stringLights_grp"
     {
-        over "pCylinder1" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/cord>
-        }
-
         over "group33"
         {
             over "miniBulb" (
