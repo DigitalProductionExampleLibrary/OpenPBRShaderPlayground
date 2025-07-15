@@ -12,7 +12,8 @@
         @./books.usda@,
         @./bottle.usda@,
         @./bubbles.usda@,
-        @./ceramicMug.usda@
+        @./ceramicMug.usda@,
+        @./chairA.usda@
     ]
 )
 
@@ -20,133 +21,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "chairA" (
-            prepend inherits = </__class_mtl__/chairA>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/chairA/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color.connect = </World/Looks/chairA/BaseColor.outputs:out>
-                float inputs:base_metalness.connect = </World/Looks/chairA/to_float2.outputs:out>
-                float inputs:coat_ior = 1.5
-                float inputs:fuzz_roughness = 0.3
-                vector3f inputs:geometry_normal.connect = </World/Looks/chairA/mtlxnormalmap1.outputs:out>
-                color3f inputs:specular_color = (0.62893, 0.62893, 0.62893)
-                float inputs:specular_roughness.connect = </World/Looks/chairA/to_float1.outputs:out>
-                token outputs:out
-            }
-
-            def Shader "BaseColor"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/chair_MAT_BaseColor.<UDIM>.tif@ (
-                    colorSpace = "srgb_tx"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/chairA/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-
-            def Shader "to_float2"
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/chairA/Metalness.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Metalness"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/chair_MAT_Metalness.<UDIM>.tif@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/chairA/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "to_float1"
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/chairA/Roughness.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Roughness"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/chair_MAT_Roughness.<UDIM>.tif@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/chairA/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "mtlxnormalmap1"
-            {
-                uniform token info:id = "ND_normalmap"
-                vector3f inputs:in.connect = </World/Looks/chairA/mtlxcombine3.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxcombine3"
-            {
-                uniform token info:id = "ND_combine3_vector3"
-                float inputs:in1.connect = </World/Looks/chairA/red.outputs:out>
-                float inputs:in2.connect = </World/Looks/chairA/mtlxinvert1.outputs:out>
-                float inputs:in3.connect = </World/Looks/chairA/blue.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "red"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/chairA/Normal.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Normal"
-            {
-                uniform token info:id = "ND_image_vector3"
-                asset inputs:file = @textures/chair_MAT_Normal.<UDIM>.tif@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/chairA/st.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxinvert1"
-            {
-                uniform token info:id = "ND_invert_float"
-                float inputs:in.connect = </World/Looks/chairA/green.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "green"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/chairA/Normal.outputs:out>
-                int inputs:index = 1
-                float outputs:out
-            }
-
-            def Shader "blue"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/chairA/Normal.outputs:out>
-                int inputs:index = 2
-                float outputs:out
-            }
-        }
-
         def Material "cord" (
             prepend inherits = </__class_mtl__/cord>
         )
@@ -4288,13 +4162,6 @@ over "World"
                 }
             }
         }
-    }
-
-    over "chairA_grp" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </World/Looks/chairA>
     }
 
     over "stringLights_grp"
