@@ -1,0 +1,25 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "meetMAT" (
+            prepend inherits = </__class_mtl__/meetMAT>
+            prepend references = @./meetMAT.mtlx@</MaterialX/Materials/meetMAT>
+        )
+        {
+        }
+    }
+
+    over "meetMAT_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/meetMAT>
+    }
+}
+
