@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="emission_luminance" type="value" value="70" />
+    <input name="emission_color" type="color3" value="0.324, 0.11215, 0" />
+    <input name="specular_roughness" type="float" value="0" />
+  </open_pbr_surface>
+
+  <surfacematerial name="lampBulb" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>

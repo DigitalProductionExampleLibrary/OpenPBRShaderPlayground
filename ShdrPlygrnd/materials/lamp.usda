@@ -1,0 +1,326 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "lamp" (
+            prepend inherits = </__class_mtl__/lamp>
+            prepend references = @./lamp.mtlx@</MaterialX/Materials/lamp>
+        )
+        {
+        }
+        
+        def Material "lampBulb" (
+            prepend inherits = </__class_mtl__/lampBulb>
+            prepend references = @./lampBulb.mtlx@</MaterialX/Materials/lampBulb>
+        )
+        {
+        }
+        
+        def Material "lampShade" (
+            prepend inherits = </__class_mtl__/lampShade>
+            prepend references = @./lampShade.mtlx@</MaterialX/Materials/lampShade>
+        )
+        {
+        }
+    }
+
+    over "lamp_grp"
+    {
+        over "office_lamp_03_arm_top_grp"
+        {
+            over "group17"
+            {
+                over "office_lamp_03_bulb_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/lamp>
+                }
+
+                over "office_lamp_03_hinge_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/lamp>
+                }
+
+                over "office_lamp_03_stand_006_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/lamp>
+                }
+
+                over "office_lamp_03_bulb_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/lampBulb>
+                }
+
+                over "office_lamp_03_shade_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/lampShade>
+                }
+            }
+
+            over "office_lamp_03_stand_005_mesh" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "office_lamp_03_stud_003_mesh" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "office_lamp_03_stud_004_mesh" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+        }
+
+        over "office_lamp_03_base_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stand_001_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stand_002_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stand_003_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stand_004_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stand_007_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stud_001_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+
+        over "office_lamp_03_stud_002_mesh" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/lamp>
+        }
+    }
+
+    over "powerPlug_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/lamp>
+    }
+
+    over "stringLights_grp"
+    {
+        over "group33"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group34"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group35"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group36"
+        {
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group37"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group38"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group43"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group44"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group45"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+
+        over "group46"
+        {
+            over "miniBulb" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lamp>
+            }
+
+            over "miniBulb1" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/lampBulb>
+            }
+        }
+    }
+}
+
