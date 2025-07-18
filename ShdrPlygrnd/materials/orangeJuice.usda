@@ -1,0 +1,77 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "OJ" (
+            prepend inherits = </__class_mtl__/OJ>
+            prepend references = @./OJ.mtlx@</MaterialX/Materials/OJ>
+        )
+        {
+        }
+
+        def Material "OJfoam" (
+            prepend inherits = </__class_mtl__/OJfoam>
+            prepend references = @./OJfoam.mtlx@</MaterialX/Materials/OJfoam>
+        )
+        {
+        }
+        
+        def Material "OJglass" (
+            prepend inherits = </__class_mtl__/OJglass>
+            prepend references = @./OJglass.mtlx@</MaterialX/Materials/OJglass>
+        )
+        {
+        }
+    }
+
+    over "orangeJuice_grp"
+    {
+        over "juice_geo_ORIG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJ>
+        }
+
+        over "juice_geo_smoothed" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJ>
+        }
+
+        over "foamMesh_ORIG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJfoam>
+        }
+
+        over "foamMesh_smoothed" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJfoam>
+        }
+
+        over "glass_geo_ORIG" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJglass>
+        }
+
+        over "glass_geo_smoothed" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OJglass>
+        }
+    }
+}
+
