@@ -1,0 +1,55 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "planePlastic" (
+            prepend inherits = </__class_mtl__/planePlastic>
+            prepend references = @./planePlastic.mtlx@</MaterialX/Materials/planePlastic>
+        )
+        {
+        }
+        
+        def Material "planePlasticLidWheels" (
+            prepend inherits = </__class_mtl__/planePlasticLidWheels>
+            prepend references = @./planePlasticLidWheels.mtlx@</MaterialX/Materials/planePlasticLidWheels>
+        )
+        {
+        }
+    }
+
+    over "plane_grp"
+    {
+        over "mainBody_grp"
+        {
+            over "bottle_grp"
+            {
+                over "cap_geo" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/planePlastic>
+                }
+            }
+        }
+
+        over "plasticCaps_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/planePlastic>
+        }
+
+        over "lids_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/planePlasticLidWheels>
+        }
+    }
+}
+
