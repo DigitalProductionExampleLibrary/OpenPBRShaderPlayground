@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "outlet" (
+            prepend inherits = </__class_mtl__/outlet>
+            prepend references = @./outlet.mtlx@</MaterialX/Materials/outlet>
+        )
+        {
+        }
+    }
+
+    over "outlet_grp"
+    {
+        over "base_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/outlet>
+        }
+    }
+}
+
