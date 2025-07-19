@@ -1,0 +1,59 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "paintBrushes" (
+            prepend inherits = </__class_mtl__/paintBrushes>
+            prepend references = @./paintBrushes.mtlx@</MaterialX/Materials/paintBrushes>
+        )
+        {
+        }
+        
+        def Material "paintBrushesSML" (
+            prepend inherits = </__class_mtl__/paintBrushesSML>
+            prepend references = @./paintBrushesSML.mtlx@</MaterialX/Materials/paintBrushesSML>
+        )
+        {
+        }
+    }
+
+    over "paintBrushes_grp"
+    {
+        over "group26" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paintBrushes>
+        }
+
+        over "group27" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paintBrushes>
+        }
+    }
+
+    over "brushA_geo" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/paintBrushesSML>
+    }
+
+    over "masonJar_grp"
+    {
+        over "brushB_geo_n3d" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paintBrushesSML>
+        }
+    }
+}
+
