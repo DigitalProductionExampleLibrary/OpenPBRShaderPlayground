@@ -1,0 +1,91 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "paper" (
+            prepend inherits = </__class_mtl__/paper>
+            prepend references = @./paper.mtlx@</MaterialX/Materials/paper>
+        )
+        {
+        }
+        
+        def Material "paperPlans" (
+            prepend inherits = </__class_mtl__/paperPlans>
+            prepend references = @./paperPlans.mtlx@</MaterialX/Materials/paperPlans>
+        )
+        {
+        }
+    }
+
+    over "paper_grp"
+    {
+        over "paperChair" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paper>
+        }
+
+        over "pPlane11" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "pPlane12" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsA_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsA_geo1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsA_geo2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsB_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsB_geo1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+
+        over "paperWallsB_geo2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/paperPlans>
+        }
+    }
+}
+
