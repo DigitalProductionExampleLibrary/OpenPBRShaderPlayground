@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="BaseColor" type="color3">
+      <input name="file" type="filename" colorspace="srgb_tx" value="textures/plans_diffuse.jpg" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <colorcorrect name="mtlxcolorcorrect1" type="color3">
+      <input name="in" type="color3" nodename="BaseColor" />
+      <input name="gain" type="float" value="4" />
+  </colorcorrect>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <!-- FIXME: For paper like material using thin wall is ideal ! -->
+    <input name="base_color" type="color3" nodename="BaseColor" />
+    <input name="specular_color" type="color3" value="0.4129, 0.4129, 0.4129" />
+    <input name="specular_roughness" type="float" value="0.4" />
+    <input name="subsurface_weight" type="float" value="0.225" />
+    <input name="subsurface_color" type="color3" nodename="mtlxcolorcorrect1" />
+    <input name="subsurface_radius" type="float" value="0.2" />
+    <input name="subsurface_radius_scale" type="color3" value="1, 1, 1" />
+  </open_pbr_surface>
+
+  <surfacematerial name="paperPlans" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
