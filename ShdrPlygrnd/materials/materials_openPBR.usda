@@ -33,7 +33,8 @@
         @./paintBrushes.usda@,
         @./paintSpill.usda@,
         @./paper.usda@,
-        @./pencil.usda@
+        @./pencil.usda@,
+        @./pins.usda@
     ]
 )
 
@@ -41,21 +42,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "pins" (
-            prepend inherits = </__class_mtl__/pins>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/pins/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0.79934, 0.79934, 0.79934)
-                float inputs:specular_roughness = 0.4
-                token outputs:out
-            }
-        }
-
         def Material "planePlastic" (
             prepend inherits = </__class_mtl__/planePlastic>
         )
@@ -1418,37 +1404,6 @@ over "World"
         }
     }
 
-    over "stringLights_grp"
-    {
-        over "pin1_geo1" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/pins>
-        }
-
-        over "pin1_geo2" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/pins>
-        }
-
-        over "pin1_geo3" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/pins>
-        }
-
-        over "pin1_geo4" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/pins>
-        }
-    }
-
     over "wallsFloor_grp"
     {
         over "wallLft"
@@ -1528,16 +1483,6 @@ over "World"
         )
         {
             rel material:binding = </World/Looks/screw_mesh>
-        }
-    }
-
-    over "paintBrushes_grp"
-    {
-        over "pin1_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/pins>
         }
     }
 
