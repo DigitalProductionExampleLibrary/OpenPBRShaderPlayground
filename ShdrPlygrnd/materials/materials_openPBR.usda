@@ -28,7 +28,8 @@
         @./masonJar.usda@,
         @./meetMAT.usda@,
         @./orangeJuice.usda@,
-        @./outlet.usda@
+        @./outlet.usda@,
+        @./pacifier.usda@
     ]
 )
 
@@ -2080,23 +2081,6 @@ over "World"
                 )
                 {
                     rel material:binding = </World/Looks/planePlastic>
-                }
-            }
-
-            over "baby_pacifier_grp"
-            {
-                over "baby_pacifier_main_body_geo" (
-                    prepend apiSchemas = ["MaterialBindingAPI"]
-                )
-                {
-                    rel material:binding = </World/Looks/pacifier>
-                }
-
-                over "baby_pacifier_rubber_geo" (
-                    prepend apiSchemas = ["MaterialBindingAPI"]
-                )
-                {
-                    rel material:binding = </World/Looks/pacifierRubber>
                 }
             }
         }
