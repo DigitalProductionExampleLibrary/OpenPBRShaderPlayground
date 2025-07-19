@@ -1,0 +1,48 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "pacifier" (
+            prepend inherits = </__class_mtl__/pacifier>
+            prepend references = @./pacifier.mtlx@</MaterialX/Materials/pacifier>
+        )
+        {
+        }
+        
+        def Material "pacifierRubber" (
+            prepend inherits = </__class_mtl__/pacifierRubber>
+            prepend references = @./pacifierRubber.mtlx@</MaterialX/Materials/pacifierRubber>
+        )
+        {
+        }
+    }
+
+    over "plane_grp"
+    {
+        over "mainBody_grp"
+        {
+            over "baby_pacifier_grp"
+            {
+                over "baby_pacifier_main_body_geo" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/pacifier>
+                }
+
+                over "baby_pacifier_rubber_geo" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/pacifierRubber>
+                }
+            }
+        }
+    }
+}
+
