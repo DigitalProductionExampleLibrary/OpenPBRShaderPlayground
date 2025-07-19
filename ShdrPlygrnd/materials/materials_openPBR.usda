@@ -27,7 +27,8 @@
         @./lamp.usda@,
         @./masonJar.usda@,
         @./meetMAT.usda@,
-        @./orangeJuice.usda@
+        @./orangeJuice.usda@,
+        @./outlet.usda@
     ]
 )
 
@@ -35,20 +36,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "outlet" (
-            prepend inherits = </__class_mtl__/outlet>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/outlet/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                float inputs:specular_roughness = 0.4
-                token outputs:out
-            }
-        }
-
         def Material "pacifier" (
             prepend inherits = </__class_mtl__/pacifier>
         )
@@ -2404,13 +2391,6 @@ over "World"
 
     over "outlet_grp"
     {
-        over "base_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/outlet>
-        }
-
         over "screw_geo" (
             prepend apiSchemas = ["MaterialBindingAPI"]
         )
