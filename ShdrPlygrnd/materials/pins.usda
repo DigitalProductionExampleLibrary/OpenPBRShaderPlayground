@@ -1,0 +1,59 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "pins" (
+            prepend inherits = </__class_mtl__/pins>
+            prepend references = @./pins.mtlx@</MaterialX/Materials/pins>
+        )
+        {
+        }
+    }
+
+    over "stringLights_grp"
+    {
+        over "pin1_geo1" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/pins>
+        }
+
+        over "pin1_geo2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/pins>
+        }
+
+        over "pin1_geo3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/pins>
+        }
+
+        over "pin1_geo4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/pins>
+        }
+    }
+    
+    over "paintBrushes_grp"
+    {
+        over "pin1_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/pins>
+        }
+    }
+}
+
