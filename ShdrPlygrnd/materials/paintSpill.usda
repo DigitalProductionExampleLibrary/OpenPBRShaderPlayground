@@ -1,0 +1,189 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "paintSpill" (
+            prepend inherits = </__class_mtl__/paintSpill>
+            prepend references = @./paintSpill.mtlx@</MaterialX/Materials/paintSpill>
+        )
+        {
+        }
+    }
+
+    over "paintSpill_grp"
+    {
+        over "polySurface10"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface11"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface4"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface5"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface6"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface7"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface8"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface9"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+    }
+
+    over "paintSpill_scrnRT_grp" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </World/Looks/paintSpill>
+
+        over "polySurface10"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface11"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface4"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface5"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface6"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface7"
+        {
+            over "subset" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                uniform token familyName = "materialBind"
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface8"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+
+        over "polySurface9"
+        {
+            over "paintSpill_SG" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/paintSpill>
+            }
+        }
+    }
+}
+
