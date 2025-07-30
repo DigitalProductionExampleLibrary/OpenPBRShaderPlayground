@@ -37,7 +37,8 @@
         @./pins.usda@,
         @./planePlastic.usda@,
         @./screw.usda@,
-        @./shadow.usda@
+        @./shadow.usda@,
+        @./stars.usda@
     ]
 )
 
@@ -45,23 +46,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "stars" (
-            prepend inherits = </__class_mtl__/stars>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/stars/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 0.346)
-                color3f inputs:emission_color = (0, 0.57692, 1)
-                float inputs:emission_luminance = 50.6451
-                float inputs:specular_roughness = 0.25
-                token outputs:out
-            }
-        }
-
         def Material "straw" (
             prepend inherits = </__class_mtl__/straw>
         )
@@ -1176,13 +1160,6 @@ over "World"
         {
             rel material:binding = </World/Looks/walls>
         }
-    }
-
-    over "stars_grp" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </World/Looks/stars>
     }
 
     over "tape_grp"

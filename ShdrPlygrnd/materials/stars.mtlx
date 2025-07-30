@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" value="1, 1, 0.346" />
+    <input name="specular_roughness" type="float" value="0.25" />
+    <input name="emission_color" type="color3" value="0, 0.57692, 1" />
+    <input name="emission_luminance" type="float" value="50.6451" />
+  </open_pbr_surface>
+
+  <surfacematerial name="stars" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
