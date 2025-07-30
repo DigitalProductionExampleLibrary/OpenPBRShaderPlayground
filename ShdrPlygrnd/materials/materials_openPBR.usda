@@ -44,7 +44,8 @@
         @./tools.usda@,
         @./towels.usda@,
         @./tube.usda@,
-        @./walls.usda@
+        @./walls.usda@,
+        @./windowFrames.usda@
     ]
 )
 
@@ -52,20 +53,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "windowFrames" (
-            prepend inherits = </__class_mtl__/windowFrames>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/windowFrames/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                float inputs:specular_roughness = 0.2
-                token outputs:out
-            }
-        }
-
         def Material "wings" (
             prepend inherits = </__class_mtl__/wings>
         )
@@ -376,29 +363,6 @@ over "World"
             )
             {
                 rel material:binding = </World/Looks/wings>
-            }
-        }
-    }
-
-    over "wallsFloor_grp"
-    {
-        over "wallLft"
-        {
-            over "group30" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/windowFrames>
-            }
-        }
-
-        over "wallRGT"
-        {
-            over "group42" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/windowFrames>
             }
         }
     }

@@ -1,0 +1,43 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "windowFrames" (
+            prepend inherits = </__class_mtl__/windowFrames>
+            prepend references = @./windowFrames.mtlx@</MaterialX/Materials/windowFrames>
+        )
+        {
+        }
+    }
+
+    over "wallsFloor_grp"
+    {
+        over "wallLft"
+        {
+            over "group30" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/windowFrames>
+            }
+        }
+
+        over "wallRGT"
+        {
+            over "group42" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/windowFrames>
+            }
+        }
+    }
+}
+

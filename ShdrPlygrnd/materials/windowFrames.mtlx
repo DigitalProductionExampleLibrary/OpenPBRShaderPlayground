@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="specular_roughness" type="float" value="0.2" />
+  </open_pbr_surface>
+
+  <surfacematerial name="windowFrames" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
