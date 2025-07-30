@@ -39,7 +39,8 @@
         @./screw.usda@,
         @./shadow.usda@,
         @./stars.usda@,
-        @./straw.usda@
+        @./straw.usda@,
+        @./tape.usda@
     ]
 )
 
@@ -47,36 +48,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "tape" (
-            prepend inherits = </__class_mtl__/tape>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/tape/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                float inputs:specular_roughness = 0.29487
-                float inputs:transmission_weight = 0.73718
-                token outputs:out
-            }
-        }
-
-        def Material "tapePlastic" (
-            prepend inherits = </__class_mtl__/tapePlastic>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/tapePlastic/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                float inputs:specular_roughness = 0.29487
-                float inputs:transmission_weight = 0.73718
-                token outputs:out
-            }
-        }
-
         def Material "toolsMetal" (
             prepend inherits = </__class_mtl__/toolsMetal>
         )
@@ -1182,13 +1153,6 @@ over "World"
         )
         {
             rel material:binding = </World/Looks/toolsMetal>
-        }
-
-        over "support_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/tapePlastic>
         }
     }
 
