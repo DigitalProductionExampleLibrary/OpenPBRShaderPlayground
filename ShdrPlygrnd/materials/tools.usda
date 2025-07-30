@@ -1,0 +1,170 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "toolsMetal" (
+            prepend inherits = </__class_mtl__/toolsMetal>
+            prepend references = @./toolsMetal.mtlx@</MaterialX/Materials/toolsMetal>
+        )
+        {
+        }
+        
+        def Material "toolsPlastic" (
+            prepend inherits = </__class_mtl__/toolsPlastic>
+            prepend references = @./toolsPlastic.mtlx@</MaterialX/Materials/toolsPlastic>
+        )
+        {
+        }
+    }
+
+    over "tape_grp"
+    {
+        over "roll_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo2" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo4" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo5" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo6" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+
+        over "roll_geo7" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/toolsMetal>
+        }
+    }
+
+    over "mug_grp"
+    {
+        over "pliers_grp"
+        {
+            over "pliers_001_grp"
+            {
+                over "pliers_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "handle_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsPlastic>
+                }
+            }
+
+            over "pliers_002_grp"
+            {
+                over "pliers_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "handle_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsPlastic>
+                }
+            }
+        }
+
+        over "scissors_grp"
+        {
+            over "blade_001_grp"
+            {
+                over "blade_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "arm_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsPlastic>
+                }
+            }
+
+            over "blade_002_grp"
+            {
+                over "blade_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "screw_001_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "screw_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsMetal>
+                }
+
+                over "arm_002_mesh" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </World/Looks/toolsPlastic>
+                }
+            }
+        }
+    }
+}
+
