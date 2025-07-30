@@ -259,8 +259,7 @@ over "World"
             over "mtlxopen_pbr_surface"
             {
                 float inputs:base_weight = 1
-                color3f inputs:geometry_opacity
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:specular_ior = 1.52
                 float inputs:specular_weight = 1
                 color3f inputs:subsurface_color = (0.50808495, 0.83160293, 0.9740634)
@@ -419,9 +418,6 @@ over "World"
 
         over "bottle"
         {
-            token outputs:mdl:displacement
-            token outputs:mdl:surface
-            token outputs:mdl:volume
             token outputs:mtlx:displacement
             token outputs:mtlx:volume
 
@@ -473,9 +469,9 @@ over "World"
                 float inputs:coat_ior = 1
                 float inputs:coat_roughness = 0.33
                 float inputs:coat_weight = 0
-                color3f inputs:geometry_opacity = (0.62536025, 0.6181515, 0.6181515)
-                bool inputs:geometry_thin_walled = 1
-                float inputs:specular_anisotropy = 0.5
+                float inputs:geometry_opacity = 0.62536025
+                bool inputs:geometry_thin_walled = true
+                float inputs:specular_roughness_anisotropy = 0.5
                 float inputs:specular_ior = 1.1
                 float inputs:specular_weight = 1
                 float inputs:thin_film_ior = 1.1
@@ -705,7 +701,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:transmission_weight = 0
             }
         }
@@ -722,7 +718,7 @@ over "World"
             over "mtlxopen_pbr_surface"
             {
                 float inputs:specular_ior = 1.3
-                float inputs:subsurface_anisotropy = 0
+                float inputs:subsurface_scatter_anisotropy = 0
                 color3f inputs:subsurface_color = (0.98407644, 0.78126436, 0.18804006)
                 float inputs:subsurface_radius = 0.004
                 color3f inputs:subsurface_radius_scale = (1, 0.97642875, 0.47133756)
@@ -794,7 +790,7 @@ over "World"
             {
                 float inputs:base_weight = 0.7
                 float inputs:coat_ior = 1
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:specular_ior = 1.3000001
             }
         }
@@ -841,7 +837,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:subsurface_radius = 10
                 float inputs:thin_film_thickness = 0.001
                 float inputs:transmission_weight = 0.5
@@ -935,7 +931,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:subsurface_radius = 0.1
                 float inputs:subsurface_weight = 0.2
             }
@@ -959,7 +955,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:thin_film_thickness = 0.001
             }
         }
@@ -975,7 +971,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:thin_film_ior = 1
                 float inputs:thin_film_thickness = 0.001
             }
@@ -1294,7 +1290,7 @@ over "World"
 
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:transmission_weight = 1
             }
         }
@@ -1314,7 +1310,7 @@ over "World"
             over "mtlxopen_pbr_surface"
             {
                 float inputs:emission_luminance = 10
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
             }
         }
 
@@ -1360,11 +1356,10 @@ over "World"
             over "mtlxopen_pbr_surface"
             {
                 float inputs:base_weight = 1
-                float inputs:coat_anisotropy = 1
+                float inputs:coat_roughness_anisotropy = 1
                 float inputs:coat_roughness = 0.1
                 float inputs:coat_weight = 1
-                bool inputs:geometry_thin_walled = 1
-                float inputs:specular_rotation = 0
+                bool inputs:geometry_thin_walled = true
                 color3f inputs:subsurface_color = (1, 0.9220251, 0.54140127)
                 float inputs:subsurface_radius = 0.001
                 float inputs:subsurface_weight = 0.1
@@ -1390,12 +1385,11 @@ over "World"
         {
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 color3f inputs:specular_color = (0.9522293, 0.9514312, 0.92190355)
                 float inputs:specular_ior = 1
                 float inputs:specular_roughness = 0
                 float inputs:subsurface_weight = 0
-                float inputs:thin_film_thickness
                 float inputs:transmission_depth = 1
                 float inputs:transmission_weight = 1
             }
@@ -1405,7 +1399,7 @@ over "World"
         {
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:subsurface_radius = 0.001
                 float inputs:subsurface_weight = 0.4
             }
@@ -1415,7 +1409,7 @@ over "World"
         {
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
                 float inputs:thin_film_ior = 1.2
                 float inputs:thin_film_thickness = 0.0001
                 float inputs:transmission_weight = 0.9
@@ -1434,7 +1428,7 @@ over "World"
         {
             over "mtlxopen_pbr_surface"
             {
-                bool inputs:geometry_thin_walled = 1
+                bool inputs:geometry_thin_walled = true
             }
         }
     }
