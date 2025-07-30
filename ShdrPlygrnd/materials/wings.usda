@@ -1,0 +1,75 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "wings" (
+            prepend inherits = </__class_mtl__/wings>
+            prepend references = @./wings.mtlx@</MaterialX/Materials/wings>
+        )
+        {
+        }
+    }
+
+    over "plane_grp"
+    {
+        over "tape_grp" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/wings>
+        }
+
+        over "cardboard_grp"
+        {
+            over "cardboardSeat_grp" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+
+            over "pCube28" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+
+            over "pCube7" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+
+            over "wingBack_geo" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+
+            over "wingLft_geo" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+
+            over "wingRgt_geo" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/wings>
+            }
+        }
+    }
+}
+

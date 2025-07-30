@@ -45,7 +45,8 @@
         @./towels.usda@,
         @./tube.usda@,
         @./walls.usda@,
-        @./windowFrames.usda@
+        @./windowFrames.usda@,
+        @./wings.usda@
     ]
 )
 
@@ -53,141 +54,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "wings" (
-            prepend inherits = </__class_mtl__/wings>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/wings/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color.connect = </World/Looks/wings/BaseColor.outputs:out>
-                float inputs:base_metalness.connect = </World/Looks/wings/to_float.outputs:out>
-                vector3f inputs:geometry_normal.connect = </World/Looks/wings/mtlxnormalmap1.outputs:out>
-                color3f inputs:geometry_opacity.connect = </World/Looks/wings/Opacity.outputs:out>
-                float inputs:specular_roughness.connect = </World/Looks/wings/to_float1.outputs:out>
-                token outputs:out
-            }
-
-            def Shader "BaseColor"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/wings_MAT_BaseColor.<UDIM>.png@ (
-                    colorSpace = "srgb_tx"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/wings/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-
-            def Shader "to_float"
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/wings/Metalness.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Metalness"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/wings_MAT_Metalness.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/wings/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "to_float1"
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/wings/Roughness.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Roughness"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/wings_MAT_Roughness.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/wings/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "Opacity"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/wings_MAT_Opacity.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/wings/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "mtlxnormalmap1"
-            {
-                uniform token info:id = "ND_normalmap"
-                vector3f inputs:in.connect = </World/Looks/wings/mtlxcombine3.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxcombine3"
-            {
-                uniform token info:id = "ND_combine3_vector3"
-                float inputs:in1.connect = </World/Looks/wings/red.outputs:out>
-                float inputs:in2.connect = </World/Looks/wings/mtlxinvert1.outputs:out>
-                float inputs:in3.connect = </World/Looks/wings/blue.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "red"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/wings/Normal.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Normal"
-            {
-                uniform token info:id = "ND_image_vector3"
-                asset inputs:file = @textures/wings_MAT_Normal.<UDIM>.png@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/wings/st.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxinvert1"
-            {
-                uniform token info:id = "ND_invert_float"
-                float inputs:in.connect = </World/Looks/wings/green.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "green"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/wings/Normal.outputs:out>
-                int inputs:index = 1
-                float outputs:out
-            }
-
-            def Shader "blue"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/wings/Normal.outputs:out>
-                int inputs:index = 2
-                float outputs:out
-            }
-        }
-
         def Material "wood_chair_seat_mesh" (
             prepend inherits = </__class_mtl__/wood_chair_seat_mesh>
         )
@@ -308,61 +174,6 @@ over "World"
                 color3f inputs:subsurface_color = (0.8, 0.0256, 0.0256)
                 float inputs:subsurface_weight = 0.25641
                 token outputs:out
-            }
-        }
-    }
-
-    over "plane_grp"
-    {
-        over "tape_grp" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/wings>
-        }
-
-        over "cardboard_grp"
-        {
-            over "cardboardSeat_grp" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
-            }
-
-            over "pCube28" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
-            }
-
-            over "pCube7" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
-            }
-
-            over "wingBack_geo" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
-            }
-
-            over "wingLft_geo" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
-            }
-
-            over "wingRgt_geo" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/wings>
             }
         }
     }
