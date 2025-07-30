@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <geompropvalue name="st" type="vector2">
+    <input name="geomprop" type="string" value="st" />
+  </geompropvalue>
+
+  <image name="BaseColor" type="float">
+      <input name="file" type="filename" colorspace="srgb_tx" value="textures/shadow_BaseColor.png" />
+      <input name="texcoord" type="vector2" nodename="st" />
+  </image>
+
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" value="0.1166, 0.21113, 0.27564" />
+    <input name="specular_roughness" type="float" value="1" />
+    <input name="geometry_opacity" type="float" nodename="BaseColor" />
+  </open_pbr_surface>
+
+  <surfacematerial name="shadow" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
