@@ -1,0 +1,64 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+over "World"
+{
+    over "Looks"
+    {
+        def Material "walls" (
+            prepend inherits = </__class_mtl__/walls>
+            prepend references = @./walls.mtlx@</MaterialX/Materials/walls>
+        )
+        {
+        }
+    }
+
+    over "wallsFloor_grp"
+    {
+        over "wallLft"
+        {
+            over "pPlane3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/walls>
+            }
+        }
+
+        over "wallRGT"
+        {
+            over "pPlane3" (
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </World/Looks/walls>
+            }
+        }
+
+        over "left_wall_orig" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/walls>
+        }
+
+        over "pPlane13" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/walls>
+        }
+
+        over "wallBK_geo" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/walls>
+        }
+    }
+}
+

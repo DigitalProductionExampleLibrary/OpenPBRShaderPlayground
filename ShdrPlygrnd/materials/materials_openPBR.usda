@@ -43,7 +43,8 @@
         @./tape.usda@,
         @./tools.usda@,
         @./towels.usda@,
-        @./tube.usda@
+        @./tube.usda@,
+        @./walls.usda@
     ]
 )
 
@@ -51,120 +52,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "walls" (
-            prepend inherits = </__class_mtl__/walls>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/walls/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color.connect = </World/Looks/walls/BaseColor.outputs:out>
-                vector3f inputs:geometry_normal.connect = </World/Looks/walls/mtlxnormalmap1.outputs:out>
-                float inputs:specular_roughness.connect = </World/Looks/walls/to_float1.outputs:out>
-                token outputs:out
-            }
-
-            def Shader "BaseColor"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/walls_BaseColor.tif@ (
-                    colorSpace = "srgb_tx"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/walls/mtlxplace2d1.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "mtlxplace2d1"
-            {
-                uniform token info:id = "ND_place2d_vector2"
-                float2 inputs:scale = (0.333, 0.333)
-                float2 inputs:texcoord.connect = </World/Looks/walls/st.outputs:out>
-                float2 outputs:out
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-
-            def Shader "to_float1"
-            {
-                uniform token info:id = "ND_extract_color3"
-                color3f inputs:in.connect = </World/Looks/walls/Roughness.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Roughness"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/wall_Roughness.tif@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/walls/mtlxplace2d1.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "mtlxnormalmap1"
-            {
-                uniform token info:id = "ND_normalmap"
-                vector3f inputs:in.connect = </World/Looks/walls/mtlxcombine3.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxcombine3"
-            {
-                uniform token info:id = "ND_combine3_vector3"
-                float inputs:in1.connect = </World/Looks/walls/red.outputs:out>
-                float inputs:in2.connect = </World/Looks/walls/mtlxinvert1.outputs:out>
-                float inputs:in3.connect = </World/Looks/walls/blue.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "red"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/walls/Normal.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "Normal"
-            {
-                uniform token info:id = "ND_image_vector3"
-                asset inputs:file = @textures/walls_Normal.tif@ (
-                    colorSpace = "Raw"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/walls/mtlxplace2d1.outputs:out>
-                vector3f outputs:out
-            }
-
-            def Shader "mtlxinvert1"
-            {
-                uniform token info:id = "ND_invert_float"
-                float inputs:in.connect = </World/Looks/walls/green.outputs:out>
-                float outputs:out
-            }
-
-            def Shader "green"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/walls/Normal.outputs:out>
-                int inputs:index = 1
-                float outputs:out
-            }
-
-            def Shader "blue"
-            {
-                uniform token info:id = "ND_extract_vector3"
-                vector3f inputs:in.connect = </World/Looks/walls/Normal.outputs:out>
-                int inputs:index = 2
-                float outputs:out
-            }
-        }
-
         def Material "windowFrames" (
             prepend inherits = </__class_mtl__/windowFrames>
         )
@@ -497,13 +384,6 @@ over "World"
     {
         over "wallLft"
         {
-            over "pPlane3" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/walls>
-            }
-
             over "group30" (
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
@@ -514,40 +394,12 @@ over "World"
 
         over "wallRGT"
         {
-            over "pPlane3" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/walls>
-            }
-
             over "group42" (
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
             {
                 rel material:binding = </World/Looks/windowFrames>
             }
-        }
-
-        over "left_wall_orig" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/walls>
-        }
-
-        over "pPlane13" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/walls>
-        }
-
-        over "wallBK_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/walls>
         }
     }
 
