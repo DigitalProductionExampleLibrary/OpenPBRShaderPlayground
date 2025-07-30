@@ -35,7 +35,8 @@
         @./paper.usda@,
         @./pencil.usda@,
         @./pins.usda@,
-        @./planePlastic.usda@
+        @./planePlastic.usda@,
+        @./screw.usda@
     ]
 )
 
@@ -43,21 +44,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "screw_mesh" (
-            prepend inherits = </__class_mtl__/screw_mesh>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/screw_mesh/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:specular_color = (0.5, 0.5, 0.5)
-                float inputs:specular_roughness = 0.2
-                token outputs:out
-            }
-        }
-
         def Material "shadow" (
             prepend inherits = </__class_mtl__/shadow>
         )
@@ -1235,16 +1221,6 @@ over "World"
         )
         {
             rel material:binding = </World/Looks/walls>
-        }
-    }
-
-    over "outlet_grp"
-    {
-        over "screw_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/screw_mesh>
         }
     }
 
