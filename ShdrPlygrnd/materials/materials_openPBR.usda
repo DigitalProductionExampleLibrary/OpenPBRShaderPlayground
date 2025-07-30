@@ -47,40 +47,7 @@
         @./walls.usda@,
         @./windowFrames.usda@,
         @./wings.usda@,
-        @./wood_chair_seat_mesh.usda@
+        @./wood_chair_seat_mesh.usda@,
+        @./yellowPaint.usda@
     ]
 )
-
-over "World"
-{
-    def Scope "Looks"
-    {
-        def Material "yellowPaint" (
-            prepend inherits = </__class_mtl__/yellowPaint>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/yellowPaint/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0.8, 0.65107, 0.0256)
-                float inputs:specular_roughness = 0.2
-                color3f inputs:subsurface_color = (0.8, 0.0256, 0.0256)
-                float inputs:subsurface_weight = 0.25641
-                token outputs:out
-            }
-        }
-    }
-
-    over "tube_grp"
-    {
-        over "paintSpill_geo" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/yellowPaint>
-        }
-    }
-}
-
