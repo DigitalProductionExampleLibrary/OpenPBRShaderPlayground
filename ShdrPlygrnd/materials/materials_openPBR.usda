@@ -36,7 +36,8 @@
         @./pencil.usda@,
         @./pins.usda@,
         @./planePlastic.usda@,
-        @./screw.usda@
+        @./screw.usda@,
+        @./shadow.usda@
     ]
 )
 
@@ -44,39 +45,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "shadow" (
-            prepend inherits = </__class_mtl__/shadow>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/shadow/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (0.1166, 0.21113, 0.27564)
-                color3f inputs:geometry_opacity.connect = </World/Looks/shadow/BaseColor.outputs:out>
-                float inputs:specular_roughness = 1
-                token outputs:out
-            }
-
-            def Shader "BaseColor"
-            {
-                uniform token info:id = "ND_image_color3"
-                asset inputs:file = @textures/shadow_BaseColor.png@ (
-                    colorSpace = "srgb_tx"
-                )
-                float2 inputs:texcoord.connect = </World/Looks/shadow/st.outputs:out>
-                color3f outputs:out
-            }
-
-            def Shader "st"
-            {
-                uniform token info:id = "ND_geompropvalue_vector2"
-                string inputs:geomprop = "st"
-                float2 outputs:out
-            }
-        }
-
         def Material "stars" (
             prepend inherits = </__class_mtl__/stars>
         )
@@ -1156,13 +1124,6 @@ over "World"
     {
         over "wallLft"
         {
-            over "window" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/shadow>
-            }
-
             over "pPlane3" (
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
@@ -1180,13 +1141,6 @@ over "World"
 
         over "wallRGT"
         {
-            over "window_scrnRT" (
-                prepend apiSchemas = ["MaterialBindingAPI"]
-            )
-            {
-                rel material:binding = </World/Looks/shadow>
-            }
-
             over "pPlane3" (
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
