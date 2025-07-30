@@ -38,7 +38,8 @@
         @./planePlastic.usda@,
         @./screw.usda@,
         @./shadow.usda@,
-        @./stars.usda@
+        @./stars.usda@,
+        @./straw.usda@
     ]
 )
 
@@ -46,26 +47,6 @@ over "World"
 {
     def Scope "Looks"
     {
-        def Material "straw" (
-            prepend inherits = </__class_mtl__/straw>
-        )
-        {
-            token outputs:mtlx:surface.connect = </World/Looks/straw/mtlxopen_pbr_surface.outputs:out>
-
-            def Shader "mtlxopen_pbr_surface"
-            {
-                uniform token info:id = "ND_open_pbr_surface_surfaceshader"
-                color3f inputs:base_color = (1, 1, 1)
-                float inputs:specular_ior = 2.82803
-                float inputs:specular_roughness = 0.35
-                color3f inputs:subsurface_color = (0.429, 0.75841, 1)
-                float inputs:subsurface_radius = 0.44769
-                color3f inputs:subsurface_radius_scale = (1, 1, 1)
-                float inputs:subsurface_weight = 1
-                token outputs:out
-            }
-        }
-
         def Material "tape" (
             prepend inherits = </__class_mtl__/tape>
         )
@@ -1000,16 +981,6 @@ over "World"
             {
                 rel material:binding = </World/Looks/wings>
             }
-        }
-    }
-
-    over "orangeJuice_grp"
-    {
-        over "straw_mesh" (
-            prepend apiSchemas = ["MaterialBindingAPI"]
-        )
-        {
-            rel material:binding = </World/Looks/straw>
         }
     }
 

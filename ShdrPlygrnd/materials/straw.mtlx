@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<materialx version="1.39" colorspace="lin_rec709">
+  <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
+    <input name="base_color" type="color3" value="1, 1, 1" />
+    <input name="specular_roughness" type="float" value="0.25" />
+    <input name="specular_ior" type="float" value="2.82803" />
+    <input name="subsurface_weight" type="float" value="1" />
+    <input name="subsurface_color" type="color3" value="0.429, 0.75841, 1" />
+    <input name="subsurface_radius" type="float" value="0.44769" />
+    <input name="subsurface_radius_scale" type="color3" value="1, 1, 1" />
+  </open_pbr_surface>
+
+  <surfacematerial name="straw" type="material">
+    <input name="surfaceshader" type="surfaceshader" nodename="mtlxopen_pbr_surface" />
+  </surfacematerial>
+</materialx>
