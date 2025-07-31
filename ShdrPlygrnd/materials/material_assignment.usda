@@ -246,7 +246,7 @@ over "World"
         }
     }
 
-    over "Looks"
+    def Scope "Looks"
     {
         over "masonJarGlass" (
             customData = {
