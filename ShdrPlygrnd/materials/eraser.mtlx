@@ -47,7 +47,7 @@
 
   <open_pbr_surface name="mtlxopen_pbr_surface" type="surfaceshader">
     <input name="base_color" type="color3" nodename="BaseColor" />
-    <input name="basse_metalness" type="float" nodename="Metalness" />
+    <input name="base_metalness" type="float" nodename="Metalness" />
     <input name="specular_roughness" type="float" nodename="Roughness" />
     <input name="geometry_normal" type="vector3" nodename="mtlxnormalmap1" />
   </open_pbr_surface>

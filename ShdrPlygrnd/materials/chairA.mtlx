@@ -52,7 +52,7 @@
     <input name="coat_ior" type="float" value="1.5" />
     <input name="base_color" type="color3" nodename="BaseColor" />
     <input name="base_metalness" type="float" nodename="Metalness" />
-    <input name="specular_color" type="float" value="0.62893, 0.62893, 0.62893" />
+    <input name="specular_color" type="color3" value="0.62893, 0.62893, 0.62893" />
     <input name="specular_roughness" type="float" nodename="Roughness" />
     <input name="geometry_normal" type="vector3" nodename="mtlxnormalmap1" />
   </open_pbr_surface>
