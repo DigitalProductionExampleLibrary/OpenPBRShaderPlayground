@@ -51,3 +51,10 @@
         @./yellowPaint.usda@
     ]
 )
+
+over "World"
+{
+    def Scope "Looks"
+    {
+    }
+}
