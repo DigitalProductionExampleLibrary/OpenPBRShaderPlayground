@@ -5,7 +5,7 @@
   </geompropvalue>
 
   <image name="Opacity" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/iceCube_grunge1.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/iceCube_grunge1.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

@@ -5,11 +5,11 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/pacifier_MAT_BaseColor.1011.png" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/pacifier_MAT_BaseColor.1011.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/pacifier_MAT_Normal.1011.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/pacifier_MAT_Normal.1011.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

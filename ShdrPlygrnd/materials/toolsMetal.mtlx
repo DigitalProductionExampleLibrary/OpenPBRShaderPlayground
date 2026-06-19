@@ -5,19 +5,19 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/toolsMetal_MAT_BaseColor.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/toolsMetal_MAT_BaseColor.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Metalness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/toolsMetal_MAT_Metalness.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/toolsMetal_MAT_Metalness.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Roughness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/toolsMetal_MAT_Roughness.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/toolsMetal_MAT_Roughness.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/toolsMetal_MAT_Normal.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/toolsMetal_MAT_Normal.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

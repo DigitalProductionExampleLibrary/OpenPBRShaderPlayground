@@ -5,11 +5,11 @@
   </geompropvalue>
 
   <image name="Roughness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/OJglass_MAT_Roughness.<UDIM>.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/OJglass_MAT_Roughness.<UDIM>.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/OJglass_MAT_Normal.<UDIM>.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/OJglass_MAT_Normal.<UDIM>.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

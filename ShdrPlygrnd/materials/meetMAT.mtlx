@@ -5,19 +5,19 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/meetMAT_MAT_BaseColor.1001.png" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/meetMAT_MAT_BaseColor.1001.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Emissive" type="color3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/meetMAT_MAT_Emissive.1001.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/meetMAT_MAT_Emissive.1001.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Roughness" type="float">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/meetMAT_MAT_BaseColor.1001.png" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/meetMAT_MAT_BaseColor.1001.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/meetMAT_MAT_Normal.1001.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/meetMAT_MAT_Normal.1001.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

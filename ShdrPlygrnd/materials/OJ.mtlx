@@ -5,7 +5,7 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/OJ_MAT_BaseColor.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/OJ_MAT_BaseColor.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

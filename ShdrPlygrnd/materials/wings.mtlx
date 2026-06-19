@@ -5,23 +5,23 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/wings_MAT_BaseColor.png" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/wings_MAT_BaseColor.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Metalness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/wings_MAT_Metalness.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/wings_MAT_Metalness.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Roughness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/wings_MAT_Roughness.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/wings_MAT_Roughness.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Opacity" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/wings_MAT_Opacity.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/wings_MAT_Opacity.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/wings_MAT_Normal.png" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/wings_MAT_Normal.png" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

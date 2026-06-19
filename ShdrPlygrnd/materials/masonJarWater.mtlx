@@ -5,7 +5,7 @@
   </geompropvalue>
 
   <image name="ScatterColor" type="color3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/masonJarLiquid_transScatterColorPurple.jpg" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/masonJarLiquid_transScatterColorPurple.jpg" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

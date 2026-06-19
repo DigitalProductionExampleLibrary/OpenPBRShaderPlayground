@@ -5,11 +5,11 @@
   </geompropvalue>
 
   <image name="Roughness" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/iceCube_rougness.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/iceCube_rougness.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Bump" type="float">
-      <input name="file" type="filename" colorspace="Raw" value="textures/iceCube_grunge1.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/iceCube_grunge1.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 

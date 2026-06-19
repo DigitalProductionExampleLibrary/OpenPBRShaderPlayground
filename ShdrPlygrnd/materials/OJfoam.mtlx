@@ -5,11 +5,11 @@
   </geompropvalue>
 
   <image name="BaseColor" type="color3">
-      <input name="file" type="filename" colorspace="srgb_tx" value="textures/OJfoam_MAT_BaseColor.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="srgb_tx" value="../textures/OJfoam_MAT_BaseColor.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
   <image name="Normal" type="vector3">
-      <input name="file" type="filename" colorspace="Raw" value="textures/OJfoam_MAT_Normal.<UDIM>.tif" />
+      <input name="file" type="filename" colorspace="Raw" value="../textures/OJfoam_MAT_Normal.<UDIM>.tif" />
       <input name="texcoord" type="vector2" nodename="st" />
   </image>
 
