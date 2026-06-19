@@ -160,7 +160,6 @@ over "World"
                 prepend apiSchemas = ["MaterialBindingAPI"]
             )
             {
-                uniform token familyName = "materialBind"
                 rel material:binding = </World/Looks/paintSpill>
             }
         }
