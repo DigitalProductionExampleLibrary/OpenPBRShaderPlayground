@@ -1,0 +1,153 @@
+#usda 1.0
+(
+    defaultPrim = "light_rig"
+    framesPerSecond = 24
+    metersPerUnit = 1
+    timeCodesPerSecond = 24
+    upAxis = "Y"
+)
+
+def Xform "light_rig" (
+    kind = "assembly"
+)
+{
+    def SphereLight "LEDmeetMat" (
+            prepend apiSchemas = ["ShadowAPI"]
+        )
+    {
+        color3f inputs:color = (0.8307699, 0.66667366, 0.083077006)
+        float inputs:diffuse = 1
+        float inputs:exposure = 2.6
+        float inputs:intensity = 400
+        bool inputs:normalize = 1
+        float inputs:radius = 3
+        color3f inputs:shadow:color
+        bool inputs:shadow:enable
+        float inputs:specular = 1
+        bool light:enableCaustics = 1
+        string primvars:dcc_name = "LEDmeetMatShape" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        bool treatAsPoint = 0
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (-64.4521172485256, -1.786302246981709, -12.399562819686107)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+
+    def RectLight "moonLight_screenLFT" (
+            prepend apiSchemas = ["ShadowAPI"]
+        )
+    {
+        color3f inputs:color = (0.42299998, 0.7659496, 1)
+        float inputs:diffuse = 1
+        float inputs:exposure = 5
+        float inputs:height = 2
+        float inputs:intensity = 900
+        bool inputs:normalize = 1
+        color3f inputs:shadow:color
+        bool inputs:shadow:enable
+        float inputs:specular = 1
+        float inputs:width = 2
+        string primvars:dcc_name = "moonLight_screenLFTShape" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (-347.08002, -83.655426, 312.48502)
+        float3 xformOp:scale = (60.003628, 75.95271, 49.46432)
+        double3 xformOp:translate = (-325.45987166240855, 121.74850687733213, 62.55986030698268)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+
+    def DomeLight "aiSkyDomeLight1"
+    {
+        color3f inputs:color = (1, 1, 1)
+        float inputs:diffuse = 1
+        float inputs:exposure = 0
+        float inputs:intensity = 1
+        float inputs:specular = 1
+        asset inputs:texture:file = @../textures/bonifacio_aragon_stairs.exr@
+        token inputs:texture:format = "latlong"
+        string primvars:dcc_name = "aiSkyDomeLightShape1" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (-21.9, -846.5, 5.3)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+
+    def RectLight "sun_screenRight" (
+            prepend apiSchemas = ["ShadowAPI"]
+        )
+    {
+        color3f inputs:color = (1, 0.8002714, 0.42299998)
+        float inputs:diffuse = 1
+        float inputs:exposure = 5
+        float inputs:height = 2
+        float inputs:intensity = 900
+        bool inputs:normalize = 1
+        color3f inputs:shadow:color
+        bool inputs:shadow:enable
+        float inputs:specular = 1
+        float inputs:width = 2
+        string primvars:dcc_name = "sun_screenRightShape" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (165.0706, 114.27659, 193.70067)
+        float3 xformOp:scale = (50.9468, 33.448547, 41.998276)
+        double3 xformOp:translate = (188.69610658871187, 71.72841600669635, 73.56019615251049)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+
+    def RectLight "mainLamp_spill_AL"
+    {
+        color3f inputs:color = (0.905, 0.64324665, 0.47964996)
+        float inputs:diffuse = 1
+        float inputs:exposure = 2.6
+        float inputs:height = 2
+        float inputs:intensity = 1500
+        bool inputs:normalize = 1
+        float inputs:specular = 1
+        float inputs:width = 2
+        bool light:enableCaustics = 1
+        string primvars:dcc_name = "mainLamp_spill_ALShape" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (-83.8157, 20.941399, 13.864051)
+        float3 xformOp:scale = (6.1584964, 6.1584964, 6.1584964)
+        double3 xformOp:translate = (-17.767894870891602, 41.74111765252362, -15.586480885303336)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+
+    def RectLight "mainLamp_spill_AL1"
+    {
+        color3f inputs:color = (0.9049558, 0.8310189, 0.47933412)
+        float inputs:diffuse = 1
+        float inputs:exposure = 2.6
+        float inputs:height = 2
+        float inputs:intensity = 1500
+        bool inputs:normalize = 1
+        float inputs:specular = 1
+        float inputs:width = 2
+        string primvars:dcc_name = "mainLamp_spill_AL1Shape" (
+            elementSize = 1
+            interpolation = "constant"
+        )
+        token visibility = "inherited"
+        float3 xformOp:rotateXYZ = (-95.8718, -21.027433, 192.99146)
+        float3 xformOp:scale = (4.453885, 4.453885, 4.453885)
+        double3 xformOp:translate = (-20.423473808149023, 55.55976851858026, -14.236616654942818)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+    }
+}
+
